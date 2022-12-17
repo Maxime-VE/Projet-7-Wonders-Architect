@@ -19,8 +19,8 @@ Donner au maximum une structure logique au code notamment via des packages.
 #### Avancée du projet : 
 
 Ce fichier (README.md) est accessible sur vos IDE et on mettera rapidement en place un backlog (Todo list)
-pour savoir les actions a effectuer en priorité.
+pour savoir les actions a effectuer en priorité il devra ête mis à jour fréquemment
 
-#### Règle du jeu: https://youtu.be/p2VmTlU01t8
+### Règle du jeu: https://youtu.be/p2VmTlU01t8
 
 ## <u> Backlog </u>
