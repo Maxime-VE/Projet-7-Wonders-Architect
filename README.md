@@ -10,7 +10,8 @@
     - Les packages : toujours écrits tout en minuscules
     - Les classes, les interfaces et les constructeurs :
       En PascalCase, à savoir, comme son nom l'indique, une majuscule à chaque début de mot. (ExempleDeNommage)
-    - Les méthodes : En camelCase, à savoir la première lettre en minuscule et une majuscule pour chaque nouveau mot. (exempleDeNommage)
+    - Les méthodes : En camelCase, à savoir la première lettre en minuscule et une majusculepour chaque nouveau mot. (exempleDeNommage)
+    -Coucou, Bonsoir Paris, Hey salut à tous les amis, Parce que c'est notre projet...
 
 #### Structure du code :
 
