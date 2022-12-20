@@ -9,6 +9,6 @@ public class HelloController {
 
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("Test Merge Request!");
+        welcomeText.setText("Test Merge Request merge_request merge_request!");
     }
 }
