@@ -24,3 +24,5 @@ pour savoir les actions a effectuer en priorité il devra ête mis à jour fréq
 ### Règle du jeu: https://youtu.be/p2VmTlU01t8
 
 ## <u> Backlog </u>
+
+1) Etudier l'existant (Comprendre ce qu' a fait ce bon vieux Arnaud)
