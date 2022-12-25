@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projet7wondersarchitect.GameController">
+   <children>
+      <ImageView fitHeight="142.0" fitWidth="135.0" layoutX="549.0" layoutY="255.0" preserveRatio="true">
+         <image>
+            <Image url="@images/modele-vide/pioche_central.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="192.0" layoutX="371.0" layoutY="443.0" preserveRatio="true">
+         <image>
+            <Image url="@images/modele-vide/merveille.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="72.0" layoutX="696.0" layoutY="277.0" preserveRatio="true">
+         <image>
+            <Image url="@images/modele-vide/jeton_scientifique.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="91.0" fitWidth="100.0" layoutX="431.0" layoutY="275.0" preserveRatio="true">
+         <image>
+            <Image url="@images/modele-vide/jeton_paix.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="100.0" layoutX="182.0" layoutY="227.0" preserveRatio="true">
+         <image>
+            <Image url="@images/modele-vide/pioche_perso.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="55.0" fitWidth="40.0" layoutX="696.0" layoutY="387.0" preserveRatio="true">
+         <image>
+            <Image url="@images/modele-vide/pion_chat.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="192.0" layoutX="636.0" layoutY="29.0" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@images/modele-vide/merveille.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="100.0" layoutX="867.0" layoutY="221.0" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@images/modele-vide/pioche_perso.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="221.0" fitWidth="231.0" layoutX="629.0" layoutY="443.0" preserveRatio="true">
+         <image>
+            <Image url="@images/modele-vide/Inventaire.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="221.0" fitWidth="231.0" layoutX="360.0" layoutY="29.0" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@images/modele-vide/Inventaire.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
