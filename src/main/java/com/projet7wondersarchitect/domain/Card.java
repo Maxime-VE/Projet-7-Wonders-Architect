@@ -12,7 +12,7 @@ public class Card {
 	public void displayCard(){
 		System.out.println("############\n" +
 				"front : " + front +"\n" +
-				"back : " + back +"\n ##########");
+				"back : " + back +"\n############");
 	}
 	
 }

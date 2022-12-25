@@ -4,7 +4,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projet7wondersarchitect.GameController">
    <children>
       <ImageView fitHeight="142.0" fitWidth="135.0" layoutX="549.0" layoutY="255.0" preserveRatio="true">
@@ -12,7 +11,7 @@
             <Image url="@images/modele-vide/pioche_central.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="200.0" fitWidth="192.0" layoutX="371.0" layoutY="443.0" preserveRatio="true">
+      <ImageView fx:id="wonder1" fitHeight="200.0" fitWidth="192.0" layoutX="371.0" layoutY="443.0" preserveRatio="true">
          <image>
             <Image url="@images/modele-vide/merveille.png" />
          </image>
@@ -47,7 +46,7 @@
             <Image url="@images/modele-vide/pioche_perso.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="221.0" fitWidth="231.0" layoutX="629.0" layoutY="443.0" preserveRatio="true">
+      <ImageView fitHeight="221.0" fitWidth="231.0" layoutX="629.0" layoutY="443.0" onMouseClicked="#test" preserveRatio="true">
          <image>
             <Image url="@images/modele-vide/Inventaire.png" />
          </image>

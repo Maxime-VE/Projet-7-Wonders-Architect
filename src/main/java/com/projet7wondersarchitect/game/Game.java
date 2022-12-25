@@ -6,21 +6,21 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Game {
+    //_________________________________________________________
+    // ZONE DE CREATION POUR LES TEST
+    //_________________________________________________________
     static Random random = new Random();
+    static Player player = new Player("Polo");
+    //_________________________________________________________
 
     public static void main(String[] args) {
-        importDeck(Wonder.Gizeh);
+        importDeck(Wonder.Gizeh, player);
     }
 
-    /** On prend en entrée un joueur et une merveille, on associe les deux dans cette fonction.
-     * Pour le moment on affiche juste la liste des cartes*/
-    public static void importDeck(Wonder wonder){
-    ArrayList<Card> piocheJoueur;
-    piocheJoueur = triCarte(wonder);
-    for(Card c : piocheJoueur){
-        c.displayCard();
-    }
-    System.out.println("nbr carte: " + piocheJoueur.size());
+    /** On prend en entrée un joueur et une merveille, on associe les deux dans cette fonction.*/
+    public static void importDeck(Wonder wonder, Player player){
+    player.piochePersonnelle = triCarte(wonder);
+
     }
 
     /** On prend en entrée une merveille on crée une liste de carte qu'on mélange
