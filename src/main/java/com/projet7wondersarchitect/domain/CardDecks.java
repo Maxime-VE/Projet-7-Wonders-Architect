@@ -15,7 +15,8 @@ public class CardDecks {
 	}
 	
 	/** Card Types x Quantities for Gizeh Deck */
-	public static final List<CardTypeQuantity> deckCardQuantities_Gizeh = Arrays.asList(// material
+	public static final List<CardTypeQuantity> deckCardQuantities_Gizeh = Arrays.asList(
+			// material
 			new CardTypeQuantity(2, CardType.CardMaterialWood), //
 			new CardTypeQuantity(2, CardType.CardMaterialPaper), //
 			new CardTypeQuantity(1, CardType.CardMaterialBrick), // 2-1
@@ -36,7 +37,8 @@ public class CardDecks {
 	);
 
 	/** Card Types x Quantities for Rhodes Deck */
-	public static final List<CardTypeQuantity> deckCardQuantities_Rhodes = Arrays.asList(// material
+	public static final List<CardTypeQuantity> deckCardQuantities_Rhodes = Arrays.asList(
+			// material
 			new CardTypeQuantity(2, CardType.CardMaterialWood), //
 			new CardTypeQuantity(2, CardType.CardMaterialPaper), //
 			new CardTypeQuantity(2, CardType.CardMaterialBrick), //
@@ -79,7 +81,8 @@ public class CardDecks {
 	);
 	
 	/** Card Types x Quantities for Halicarnasse Deck */
-	public static final List<CardTypeQuantity> deckCardQuantities_Halicarnasse = Arrays.asList(// material
+	public static final List<CardTypeQuantity> deckCardQuantities_Halicarnasse = Arrays.asList(
+			// material
 			new CardTypeQuantity(2, CardType.CardMaterialWood), //
 			new CardTypeQuantity(1, CardType.CardMaterialPaper), // 2-1
 			new CardTypeQuantity(2, CardType.CardMaterialBrick), //
@@ -100,7 +103,8 @@ public class CardDecks {
 	);
 
 	/** Card Types x Quantities for Alexandrie Deck */
-	public static final List<CardTypeQuantity> deckCardQuantities_Alexandrie = Arrays.asList(// material
+	public static final List<CardTypeQuantity> deckCardQuantities_Alexandrie = Arrays.asList(
+			// material
 			new CardTypeQuantity(2, CardType.CardMaterialWood), //
 			new CardTypeQuantity(2, CardType.CardMaterialPaper), //
 			new CardTypeQuantity(2, CardType.CardMaterialBrick), //
@@ -121,7 +125,8 @@ public class CardDecks {
 	);
 
 	/** Card Types x Quantities for Ephese Deck */
-	public static final List<CardTypeQuantity> deckCardQuantities_Ephese = Arrays.asList(// material
+	public static final List<CardTypeQuantity> deckCardQuantities_Ephese = Arrays.asList(
+			// material
 			new CardTypeQuantity(2, CardType.CardMaterialWood), //
 			new CardTypeQuantity(2, CardType.CardMaterialPaper), //
 			new CardTypeQuantity(2, CardType.CardMaterialBrick), //
@@ -142,7 +147,8 @@ public class CardDecks {
 	);
 
 	/** Card Types x Quantities for Olympie Deck */
-	public static final List<CardTypeQuantity> deckCardQuantities_Olympie = Arrays.asList(// material
+	public static final List<CardTypeQuantity> deckCardQuantities_Olympie = Arrays.asList(
+			// material
 			new CardTypeQuantity(1, CardType.CardMaterialWood), // 2-1
 			new CardTypeQuantity(2, CardType.CardMaterialPaper), //
 			new CardTypeQuantity(2, CardType.CardMaterialBrick), //
@@ -162,8 +168,9 @@ public class CardDecks {
 			new CardTypeQuantity(3, CardType.CardPolitic_cat) //
 	);
 
-	/** Card Types x Quantities for extra Question Deck */
-	public static final List<CardTypeQuantity> deckCardQuantities_Extra = Arrays.asList(// material
+	/** Card Types x Quantities for extra Question Deck */ // C'est la pioche centrale
+	public static final List<CardTypeQuantity> deckCardQuantities_Extra = Arrays.asList(
+			// material
 			new CardTypeQuantity(4, CardType.CardMaterialWood), //
 			new CardTypeQuantity(4, CardType.CardMaterialPaper), //
 			new CardTypeQuantity(4, CardType.CardMaterialBrick), //
