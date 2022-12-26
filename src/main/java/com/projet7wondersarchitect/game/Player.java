@@ -11,12 +11,15 @@ public class Player {
     private int resources;
     private int victoryPoints;
 
-    public Player(String name) {
+    private int age;
+
+    public Player(String name, int age) {
         this.name = name;
         this.inventory = new ArrayList<>();
         this.piochePersonnelle = new ArrayList<>();
         this.resources = 0;
         this.victoryPoints = 0;
+        this.age = age ;
     }
 
     public void drawCard(Card card) {
@@ -39,4 +42,9 @@ public class Player {
     public void gainVictoryPoints(int victoryPoints) {
         this.victoryPoints += victoryPoints;
     }
+
+    public String getName() {return name;}
+    public int getAge() {return age;}
+
 }
+
