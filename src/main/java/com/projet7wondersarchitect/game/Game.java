@@ -44,7 +44,7 @@ public class Game {
                 How many player want to play ?
                 (You can play between 2 and 7 players).
                 """);
-        playerList = new ArrayList<>();
+        List<Player> playerList = new ArrayList<>();
         int playerNumbers = 2;
         for (int i = 0; i < playerNumbers; i++) {
             System.out.println("Enter name of player " + (i + 1) + " :");
@@ -112,5 +112,4 @@ public class Game {
     }
 
     private static Wonder wondersSelect;
-    private static List<Player> playerList;
 }
