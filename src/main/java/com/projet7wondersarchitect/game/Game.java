@@ -58,7 +58,8 @@ public class Game {
         for (Player player : playerList) {
             System.out.println("Choose a deck for " + player.getName() + " :");
             availableDecks();
-            switch (random.nextInt(7)) {
+            int deckSelect = random.nextInt(7);
+            switch (deckSelect) {
                 case 0 -> wondersSelect = Wonder.Alexandrie;
                 case 1 -> wondersSelect = Wonder.Babylone;
                 case 2 -> wondersSelect = Wonder.Ephese;
@@ -66,6 +67,25 @@ public class Game {
                 case 4 -> wondersSelect = Wonder.Halicarnasse;
                 case 5 -> wondersSelect = Wonder.Olympie;
                 case 6 -> wondersSelect = Wonder.Rhodes;
+            }
+            if(!wondersSelect.getAvailable()) {
+                while (!wondersSelect.getAvailable()) {
+                    System.out.println("Error choose available deck for " + player.getName() + " :");
+                    availableDecks();
+                    deckSelect = random.nextInt(7);
+                    switch (deckSelect) {
+                        case 0 -> wondersSelect = Wonder.Alexandrie;
+                        case 1 -> wondersSelect = Wonder.Babylone;
+                        case 2 -> wondersSelect = Wonder.Ephese;
+                        case 3 -> wondersSelect = Wonder.Gizeh;
+                        case 4 -> wondersSelect = Wonder.Halicarnasse;
+                        case 5 -> wondersSelect = Wonder.Olympie;
+                        case 6 -> wondersSelect = Wonder.Rhodes;
+                    }
+
+                }
+                wondersSelect.setAvailableFalse();
+                importDeck(wondersSelect, player);
             }
             wondersSelect.setAvailableFalse();
             importDeck(wondersSelect, player);
