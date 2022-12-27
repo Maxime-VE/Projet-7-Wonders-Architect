@@ -48,11 +48,17 @@ public class Game {
         int playerNumbers = 2;
         for (int i = 0; i < playerNumbers; i++) {
             System.out.println("Enter name of player " + (i + 1) + " :");
-            String playerName = "Lachaud BG";
-            System.out.println("Enter player's age :");
+            String playerName = "Lachaud BG" + (i+1);
+            System.out.println("Player " + (i+1) + " names " + playerName);
+            System.out.println("Enter" + playerName + "'s age :");
             int age = random.nextInt(99); // ATTENTION le jeu est conseillé pour des joueurs de +8 (flemme de généré un nombre > +8)
+            System.out.println(playerName + " is " + age + " years old");
             Player player = new Player(playerName, age);
             playerList.add(player);
+            System.out.println("""
+                    
+                    ###############################################
+                    """);
         }
         playerList.sort(new AgeComparator());
         for (Player player : playerList) {
@@ -87,8 +93,14 @@ public class Game {
                 wondersSelect.setAvailableFalse();
                 importDeck(wondersSelect, player);
             }
-            wondersSelect.setAvailableFalse();
-            importDeck(wondersSelect, player);
+            else{
+                wondersSelect.setAvailableFalse();
+                importDeck(wondersSelect, player);
+                System.out.println("""
+                    
+                    ###############################################
+                    """);
+            }
         }
     }
 
