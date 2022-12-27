@@ -13,7 +13,7 @@ public class Jeton {
             nbJetonR = 5;
         }
         else{
-            nbJetonR = 6;
+            nbJetonR = 7;
         }
         return nbJetonR;
     }
