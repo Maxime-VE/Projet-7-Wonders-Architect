@@ -45,7 +45,11 @@ public class Game {
                 (You can play between 2 and 7 players).
                 """);
         List<Player> playerList = new ArrayList<>();
-        int playerNumbers = 2;
+        int playerNumbers = 2+ random.nextInt(7);
+        int jetonNumber = nbJeton(playerNumbers);
+        System.out.println("There are " + playerNumbers + " players.\n" +
+                "So, during this game, there will be " + jetonNumber + " jeton.\n" +
+                "");
         for (int i = 0; i < playerNumbers; i++) {
             System.out.println("Enter name of player " + (i + 1) + " :");
             String playerName = "Lachaud BG" + (i+1);
@@ -76,7 +80,9 @@ public class Game {
             }
             if(!wondersSelect.getAvailable()) {
                 while (!wondersSelect.getAvailable()) {
-                    System.out.println("Error choose available deck for " + player.getName() + " :");
+                    System.out.println("\n" +
+                                    "Error choose available deck for " + player.getName() + " :\n" +
+                            "");
                     availableDecks();
                     deckSelect = random.nextInt(7);
                     switch (deckSelect) {
@@ -92,6 +98,10 @@ public class Game {
                 }
                 wondersSelect.setAvailableFalse();
                 importDeck(wondersSelect, player);
+                System.out.println("""
+                    
+                    ###############################################
+                    """);
             }
             else{
                 wondersSelect.setAvailableFalse();
@@ -121,6 +131,24 @@ public class Game {
                 System.out.println("[" + (i+1) + "]: " + availableDecksList.get(i) + " : disable");
             }
         }
+    }
+
+    /**Fonction pour définir le nombre de jetons de paix/bataille dans la partie **/
+    public static int nbJeton(int nbJoueur){
+        int nbJetonR = 0;
+        if (nbJoueur == 2 || nbJoueur == 3){
+            nbJetonR = 3;
+        }
+        else if (nbJoueur == 4){
+            nbJetonR = 4;
+        }
+        else if (nbJoueur == 5){
+            nbJetonR = 5;
+        }
+        else{
+            nbJetonR = 6;
+        }
+        return nbJetonR;
     }
 
     private static Wonder wondersSelect;
