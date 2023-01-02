@@ -6,6 +6,8 @@ import static com.projet7wondersarchitect.domain.CardDecks.*;
 
 public enum Wonder {
 
+	EmptyDeck("Empty","Vide","Default deck", emptyDeck ,true),
+
 	Alexandrie("Alexandrie", "Alexandrie",
 			"Prenez la première carte d'une pioche au choix, n'importe où sur la table, et posez-la devant vous",
 			deckCardQuantities_Alexandrie,
@@ -43,7 +45,6 @@ public enum Wonder {
 	public final List<CardDecks.CardTypeQuantity> cardDeck;
 	public Boolean available;
 
-	
 	// ------------------------------------------------------------------------
 	
 	Wonder(String displayName, String frenchName, String effectDescription, List<CardTypeQuantity> cardDeck, boolean available) {

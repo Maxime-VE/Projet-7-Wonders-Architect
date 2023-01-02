@@ -15,7 +15,10 @@ public class CardDecks {
 			this.cardBack = cardBack;
 		}
 	}
-	
+
+	/** Empty card deck */
+	 public static final List<CardTypeQuantity> emptyDeck = Arrays.asList(null);
+
 	/** Card Types x Quantities for Gizeh Deck */
 	public static final List<CardTypeQuantity> deckCardQuantities_Gizeh = Arrays.asList(
 			// material

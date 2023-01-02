@@ -9,7 +9,7 @@ public class Game {
     // ZONE DE CREATION POUR LES TEST
     //_________________________________________________________
     static Random random = new Random();
-    static Player player = new Player("Polo",12);
+    /* static Player player = new Player("Polo",12); */
     //_________________________________________________________
 
     public static void main(String[] args) {
@@ -50,8 +50,8 @@ public class Game {
             System.out.println("Enter name of player " + (i + 1) + " :");
             String playerName = "Lachaud BG";
             System.out.println("Enter player's age :");
-            int age = random.nextInt(99); // ATTENTION le jeu est conseillé pour des joueurs de +8 (flemme de généré un nombre > +8)
-            Player player = new Player(playerName, age);
+            int age = random.nextInt(99); // ATTENTION le jeu est conseillé pour des joueurs de +8 (flemme de généré un nombre > +8 pour l'instant ! ).
+            Player player = new Player(playerName, age, Wonder.EmptyDeck);
             playerList.add(player);
         }
         playerList.sort(new AgeComparator());
@@ -84,11 +84,10 @@ public class Game {
                     }
 
                 }
-                wondersSelect.setAvailableFalse();
-                importDeck(wondersSelect, player);
             }
             wondersSelect.setAvailableFalse();
             importDeck(wondersSelect, player);
+            player.setChosenDeck(wondersSelect);
         }
     }
 
