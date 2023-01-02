@@ -46,13 +46,27 @@ public class Game {
                 """);
         List<Player> playerList = new ArrayList<>();
         int playerNumbers = 2;
+        int jetonNumber = nbJeton(playerNumbers);
+        System.out.println("There are " + playerNumbers + " players.\n" +
+                "So, during this game, there will be " + jetonNumber + " jeton.\n" +
+                "");
+        System.out.println("""
+
+                    ###############################################
+                    """);
         for (int i = 0; i < playerNumbers; i++) {
             System.out.println("Enter name of player " + (i + 1) + " :");
-            String playerName = "Lachaud BG";
-            System.out.println("Enter player's age :");
+            String playerName = "Lachaud BG " + (i+1);
+            System.out.println("Player " + (i+1) + " names " + playerName);
+            System.out.println("Enter" + playerName + "'s age :");
             int age = random.nextInt(99); // ATTENTION le jeu est conseillé pour des joueurs de +8 (flemme de généré un nombre > +8 pour l'instant ! ).
+            System.out.println(playerName + " is " + age + " years old");
             Player player = new Player(playerName, age, Wonder.EmptyDeck);
             playerList.add(player);
+            System.out.println("""
+
+                    ###############################################
+                    """);
         }
         playerList.sort(new AgeComparator());
         for (Player player : playerList) {
@@ -70,7 +84,9 @@ public class Game {
             }
             if(!wondersSelect.getAvailable()) {
                 while (!wondersSelect.getAvailable()) {
-                    System.out.println("Error choose available deck for " + player.getName() + " :");
+                    System.out.println("\n" +
+                            "Error choose available deck for " + player.getName() + " :\n" +
+                            "");
                     availableDecks();
                     deckSelect = random.nextInt(7);
                     switch (deckSelect) {
@@ -88,6 +104,10 @@ public class Game {
             wondersSelect.setAvailableFalse();
             importDeck(wondersSelect, player);
             player.setChosenDeck(wondersSelect);
+            System.out.println("""
+
+                    ###############################################
+                    """);
         }
     }
 
@@ -109,6 +129,25 @@ public class Game {
             }
         }
     }
+
+    /**Fonction pour définir le nombre de jetons de paix/bataille dans la partie **/
+    public static int nbJeton(int nbJoueur){
+        int nbJetonR = 0;
+        if (nbJoueur == 2 || nbJoueur == 3){
+            nbJetonR = 3;
+        }
+        else if (nbJoueur == 4){
+            nbJetonR = 4;
+        }
+        else if (nbJoueur == 5){
+            nbJetonR = 5;
+        }
+        else{
+            nbJetonR = 6;
+        }
+        return nbJetonR;
+    }
+
 
     private static Wonder wondersSelect;
 }
