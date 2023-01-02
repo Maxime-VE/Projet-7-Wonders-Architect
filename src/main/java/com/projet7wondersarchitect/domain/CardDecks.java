@@ -17,7 +17,7 @@ public class CardDecks {
 	}
 
 	/** Empty card deck */
-	 public static final List<CardTypeQuantity> emptyDeck = Arrays.asList(null);
+	 public static final List<CardTypeQuantity> emptyDeck = Arrays.asList();
 
 	/** Card Types x Quantities for Gizeh Deck */
 	public static final List<CardTypeQuantity> deckCardQuantities_Gizeh = Arrays.asList(
