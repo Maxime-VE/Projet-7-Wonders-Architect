@@ -60,54 +60,47 @@ public class Game {
             System.out.println("Player " + (i+1) + " names " + playerName);
             System.out.println("Enter" + playerName + "'s age :");
             int age = random.nextInt(99); // ATTENTION le jeu est conseillé pour des joueurs de +8 (flemme de généré un nombre > +8 pour l'instant ! ).
-            System.out.println(playerName + " is " + age + " years old");
-            Player player = new Player(playerName, age, Wonder.EmptyDeck);
+            System.out.println(playerName + " is " + age + " years old\n");
+            System.out.println("""
+                    ###############################################
+                    """);
+            for (int j=0; j<1 ; j++){
+                System.out.println("Choose a deck for " + playerName + " :");
+                availableDecks();
+                int deckSelect = random.nextInt(7);
+                switch (deckSelect) {
+                    case 0 -> wondersSelect = Wonder.Alexandrie;
+                    case 1 -> wondersSelect = Wonder.Babylone;
+                    case 2 -> wondersSelect = Wonder.Ephese;
+                    case 3 -> wondersSelect = Wonder.Gizeh;
+                    case 4 -> wondersSelect = Wonder.Halicarnasse;
+                    case 5 -> wondersSelect = Wonder.Olympie;
+                    case 6 -> wondersSelect = Wonder.Rhodes;
+                }
+                if(!wondersSelect.getAvailable()) {
+                    j--;
+                    System.out.println("\n");
+                }
+            }
+
+
+            Player player = new Player(playerName, age, wondersSelect);
             playerList.add(player);
+            wondersSelect.setAvailableFalse();
+            importDeck(wondersSelect, playerList.get(i));
             System.out.println("""
 
                     ###############################################
                     """);
         }
         playerList.sort(new AgeComparator());
-        for (Player player : playerList) {
-            System.out.println("Choose a deck for " + player.getName() + " :");
-            availableDecks();
-            int deckSelect = random.nextInt(7);
-            switch (deckSelect) {
-                case 0 -> wondersSelect = Wonder.Alexandrie;
-                case 1 -> wondersSelect = Wonder.Babylone;
-                case 2 -> wondersSelect = Wonder.Ephese;
-                case 3 -> wondersSelect = Wonder.Gizeh;
-                case 4 -> wondersSelect = Wonder.Halicarnasse;
-                case 5 -> wondersSelect = Wonder.Olympie;
-                case 6 -> wondersSelect = Wonder.Rhodes;
-            }
-            if(!wondersSelect.getAvailable()) {
-                while (!wondersSelect.getAvailable()) {
-                    System.out.println("\n" +
-                            "Error choose available deck for " + player.getName() + " :\n" +
-                            "");
-                    availableDecks();
-                    deckSelect = random.nextInt(7);
-                    switch (deckSelect) {
-                        case 0 -> wondersSelect = Wonder.Alexandrie;
-                        case 1 -> wondersSelect = Wonder.Babylone;
-                        case 2 -> wondersSelect = Wonder.Ephese;
-                        case 3 -> wondersSelect = Wonder.Gizeh;
-                        case 4 -> wondersSelect = Wonder.Halicarnasse;
-                        case 5 -> wondersSelect = Wonder.Olympie;
-                        case 6 -> wondersSelect = Wonder.Rhodes;
-                    }
+        System.out.println("""
+                ##############Resume game settings##############
 
-                }
-            }
-            wondersSelect.setAvailableFalse();
-            importDeck(wondersSelect, player);
-            player.setChosenDeck(wondersSelect);
-            System.out.println("""
-
-                    ###############################################
-                    """);
+                "Game turn order whit resume of wonders selected :
+                """);
+        for(Player player : playerList) {
+            System.out.println(player.getName() + " with wonder deck : " + player.getChosenDeck());
         }
     }
 
