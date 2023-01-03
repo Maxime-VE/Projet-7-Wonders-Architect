@@ -11,12 +11,18 @@ public class Player {
     private int resources;
     private int victoryPoints;
 
-    public Player(String name) {
+    private Wonder chosenWonder;
+
+    private int age;
+
+    public Player(String name, int age, Wonder wonder) {
         this.name = name;
         this.inventory = new ArrayList<>();
         this.piochePersonnelle = new ArrayList<>();
         this.resources = 0;
         this.victoryPoints = 0;
+        this.age = age ;
+        this.chosenWonder = wonder;
     }
 
     public void drawCard(Card card) {
@@ -39,4 +45,14 @@ public class Player {
     public void gainVictoryPoints(int victoryPoints) {
         this.victoryPoints += victoryPoints;
     }
+
+    public String getName() {return name;}
+
+    public int getAge() {return age;}
+
+    public Wonder getChosenDeck() {return chosenWonder;}
+    public void setChosenDeck(Wonder c) {chosenWonder = c;}
+
+
 }
+
