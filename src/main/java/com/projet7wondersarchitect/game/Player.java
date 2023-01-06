@@ -6,6 +6,8 @@ import java.util.List;
 
 public class Player {
     private final String name;
+
+    public Boolean cat;
     private List<Card> inventory;
     public List<Card> piochePersonnelle;
     private int resources;
@@ -23,6 +25,7 @@ public class Player {
         this.victoryPoints = 0;
         this.age = age ;
         this.chosenWonder = wonder;
+        this.cat = false;
     }
 
     public void drawCard(Card card) {
@@ -50,8 +53,10 @@ public class Player {
 
     public int getAge() {return age;}
 
-    public Wonder getChosenDeck() {return chosenWonder;}
-    public void setChosenDeck(Wonder c) {chosenWonder = c;}
+    public Wonder getChosenDeck() { return chosenWonder; }
+    public void setChosenDeck(Wonder c) { chosenWonder = c; }
+
+    private void setCat(boolean b) { cat = b; }
 
 
 }
