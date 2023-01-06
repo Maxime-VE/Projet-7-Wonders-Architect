@@ -45,11 +45,11 @@ public class Game {
 
     public void afficheEtat(){
         System.out.println(merveille[0].nameConstruction);
-        System.out.println(merveille[0].namePartieConstruction + " | 3 ressources identiques  | " + merveille[0].pouvoir + " | " + merveille[0].avance);
+        System.out.println(merveille[0].namePartieConstruction + "      | 3 ressources identiques  | " + merveille[0].pouvoir + " | " + merveille[0].avance);
         System.out.println(merveille[1].namePartieConstruction + " | 4 ressources différentes | " + merveille[1].pouvoir + " | " + merveille[1].avance);
         System.out.println(merveille[2].namePartieConstruction + " | 4 ressources différentes | " + merveille[2].pouvoir + " | " + merveille[2].avance);
-        System.out.println(merveille[3].namePartieConstruction + " | 4 ressources différentes | " + merveille[3].pouvoir + " | " + merveille[3].avance);
-        System.out.println(merveille[4].namePartieConstruction + " | 3 ressources identiques  | " + merveille[4].pouvoir + " | " + merveille[4].avance + "\n" +
+        System.out.println(merveille[3].namePartieConstruction + "  | 4 ressources différentes | " + merveille[3].pouvoir + " | " + merveille[3].avance);
+        System.out.println(merveille[4].namePartieConstruction + "       | 3 ressources identiques  | " + merveille[4].pouvoir + " | " + merveille[4].avance + "\n" +
                 "");
     }
 
@@ -57,60 +57,74 @@ public class Game {
         String nameM = "Capitaine est une merveille vivante";
         merveilleDebut(nameM);
         afficheEtat();
-        int carteBois = verifPaquet("Bois");
-        int carteFer = verifPaquet("Fer");
+        int carteBois; //= verifPaquet("Bois");
+        int carteFer; //= verifPaquet("Fer");
+        carteBois = 4;
+        carteFer = 4;
+        int avanceeMerveille = 0;
 
-        if (merveille[0].construction == noBuilt){
-            if (carteBois >= 3 || carteFer >= 3){
-                if (true){  //On peut construire le plancher
-                    merveille[0].construction = built;
-                    merveille[0].avance = "Construite";
-                    //On défausse les cartes
+        while (avanceeMerveille<5){
+            avanceeMerveille = verifMerveille();
+            if (merveille[0].construction == noBuilt){
+                if (carteBois >= 3 || carteFer >= 3){
+                    if (true){  //On peut construire le plancher
+                        merveille[0].construction = built;
+                        merveille[0].avance = "Construite";
+                        //On défausse les cartes
+                        System.out.println("Le " + merveille[0].namePartieConstruction + " est construit. \n");
+                        afficheEtat();
+                    }
                 }
             }
-        }
 
-        else{ //Le plancher est déjà construit
-            int pilier = 1 + rand.nextInt(4);
+            else{ //Le plancher est déjà construit
+                int pilier = 1 + rand.nextInt(3);
 
-            if (merveille[pilier].construction == built){ //Si le pilier a été construit
-                for (int i = 0; i < 3; i ++){ //On vérifie si tous les piliers ont été construis
-                    int j = i + 1;
+                if (merveille[pilier].construction == built){ //Si le pilier a été construit
+                    for (int i = 0; i < 3; i ++){ //On vérifie si tous les piliers ont été construis
+                        int j = i + 1;
 
-                    if (merveille[j].construction == noBuilt){ //Si au moins un pilier n'est pas construit
-                        while (merveille[pilier].construction == built){
-                            pilier = 1 + rand.nextInt(4);
-                        }
-                        if (carteBois >= 1 || carteFer >= 1){
-                            merveille[pilier].construction = built; //On construit le pilier
-                            merveille[pilier].avance = "Construite";
-                            //On défausse les cartes
+                        if (merveille[j].construction == noBuilt){ //Si au moins un pilier n'est pas construit
+                            while (merveille[pilier].construction == built){
+                                pilier = 1 + rand.nextInt(3);
+                            }
+                            if (carteBois >= 1 || carteFer >= 1){
+                                merveille[pilier].construction = built; //On construit le pilier
+                                merveille[pilier].avance = "Construite";
+                                //On défausse les cartes
+                                System.out.println("Le " + merveille[pilier].namePartieConstruction + " est construit. \n");
+                                afficheEtat();
+                            }
+                            break;
                         }
                         break;
                     }
-                    break;
+
+                    if (avanceeMerveille == 4){
+                        if (merveille[4].construction == noBuilt) { //Si on peut créer le toit
+                            if (carteBois >= 3 || carteFer >= 3){
+                                merveille[4].construction = built; //On construit le toit
+                                merveille[4].avance = "Construite";
+                                //On défausse les cartes
+                                System.out.println("La " + merveille[4].namePartieConstruction + " est construite. \n");
+                                afficheEtat();
+                            }
+                        }
+                    }
                 }
 
-                if (merveille[4].construction == noBuilt) { //Si on peut créer le toit
-                    if (carteBois >= 3 || carteFer >= 3){
-                        merveille[4].construction = built; //On construit le toit
-                        merveille[4].avance = "Construite";
+                else{
+                    if (carteBois >= 1 || carteFer >= 1){
+                        merveille[pilier].construction = built; //On construit le pilier
+                        merveille[pilier].avance = "Construite";
                         //On défausse les cartes
+                        System.out.println("Le " + merveille[pilier].namePartieConstruction + " est construit. \n");
+                        afficheEtat();
                     }
                 }
             }
-
-            else{
-                if (carteBois >= 1 || carteFer >= 1){
-                    merveille[pilier].construction = built; //On construit le pilier
-                    merveille[pilier].avance = "Construite";
-                    //On défausse les cartes
-                }
-            }
         }
-        int avanceeMerveille = verifMerveille();
-        if (avanceeMerveille == 5){
-            System.out.println("La merveille " + merveille[0].nameConstruction + " est finie");
-        }
+        System.out.println("La merveille " + merveille[0].nameConstruction + " est finie. \n");
+        afficheEtat();
     }
 }
