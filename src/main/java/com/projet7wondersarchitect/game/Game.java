@@ -151,5 +151,38 @@ public class Game {
         return nbJetonR;
     }
 
+    Jeton[] listeJeton;
+    int numberJeton;
+
+    public void changeJeton(){
+        listeJeton = new Jeton[numberJeton];
+        for (int i = 0; i < numberJeton; i++){
+            listeJeton[i] = new JetonPaix("Jeton Paix");
+        }
+        int nbJetonBataille = 0;
+        while (nbJetonBataille < numberJeton){
+            int nbBouclier = random.nextInt(2);
+            if (nbJetonBataille + nbBouclier < numberJeton){
+                if (nbBouclier > 0){
+                    for (int j = 0; j < nbBouclier; j++){
+                        listeJeton[nbJetonBataille] = new JetonPaix("Jeton de Bataille");
+                    }
+                }
+                nbJetonBataille += nbBouclier;
+            }
+            System.out.println("\n" +
+                    "Il y a " + nbBouclier + " de tirer pour ce tour.\n" +
+                    "");
+            System.out.println(listeJeton);
+        }
+        System.out.println("""
+
+                C'est l'heure de la bataille
+                """);
+        for (int i = 0; i < numberJeton; i++){
+            listeJeton[i] = new JetonPaix("Jeton Paix");
+        }
+    }
+
     private static Wonder wondersSelect;
 }
