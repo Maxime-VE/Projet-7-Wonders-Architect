@@ -93,7 +93,13 @@ public class Game {
                     ###############################################
                     """);
         }
-        playerList.sort(new AgeComparator());
+        List<Player> fakeList = new ArrayList<>();
+        fakeList = playerList;
+        fakeList.sort(new AgeComparator());
+        Player firtsPlayer = fakeList.get(0);
+        playerList.add(0,firtsPlayer);
+        playerList.remove(firtsPlayer);
+
         System.out.println("""
                 ##############Resume game settings##############
 
@@ -122,6 +128,7 @@ public class Game {
             }
         }
     }
+
 
     /**Fonction pour définir le nombre de jetons de paix/bataille dans la partie **/
     public static int nbJeton(int nbJoueur){
