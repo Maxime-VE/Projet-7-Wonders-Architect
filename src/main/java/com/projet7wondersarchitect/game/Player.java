@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Player {
     private final String name;
-    private List<Card> inventory;
+    List<Card> inventory;
     public List<Card> piochePersonnelle;
     private int resources;
     private int victoryPoints;
@@ -14,6 +14,8 @@ public class Player {
     private Wonder chosenWonder;
 
     private int age;
+
+    private int[][] progression;
 
     public Player(String name, int age, Wonder wonder) {
         this.name = name;
@@ -50,7 +52,7 @@ public class Player {
 
     public int getAge() {return age;}
 
-    public Wonder getChosenDeck() {return chosenWonder;}
+    public Wonder getWonder() {return chosenWonder;}
     public void setChosenDeck(Wonder c) {chosenWonder = c;}
 
 

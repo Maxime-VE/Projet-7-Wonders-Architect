@@ -10,11 +10,9 @@ public enum Wonder {
 
 	Alexandrie("Alexandrie", "Alexandrie",
 			"Prenez la première carte d'une pioche au choix, n'importe où sur la table, et posez-la devant vous",
-			deckCardQuantities_Alexandrie,
-			true),
-	
+			deckCardQuantities_Alexandrie, true),
 	Halicarnasse("Halicarnasse", "Halicarnasse",
-			"Prenez les 5 premières cartes de la pioche à votre gauche ou à votre droite, choisissez-en 1 et posez-la devant vous" //
+			"Prenez les 5 premières cartes de la pioche à votre gauche ou à votre droite, choisissez-en 1 et posez-la devant vous"
 			+ "Mélangez-les cartes restantes dans leur pioche",deckCardQuantities_Halicarnasse, true),
 	
 	Ephese("Ephese", "Ephèse",
@@ -25,7 +23,8 @@ public enum Wonder {
 			deckCardQuantities_Olympie, true),
 	
 	Babylone("Babylone", "Babylone",
-			"Choisissez 1 jeton Progrès parmi les 4 disponibles, et posez-le devant vous",deckCardQuantities_Babylon, true),
+			"Choisissez 1 jeton Progrès parmi les 4 disponibles, et posez-le devant vous",
+			deckCardQuantities_Babylon, true),
 	
 	Rhodes("Rhodes", "Rhodes",
 			"Ajoutez 1 Bouclier à votre total de Boucliers",deckCardQuantities_Rhodes, true),
@@ -45,8 +44,6 @@ public enum Wonder {
 	public final List<CardDecks.CardTypeQuantity> cardDeck;
 	public Boolean available;
 
-	// ------------------------------------------------------------------------
-	
 	Wonder(String displayName, String frenchName, String effectDescription, List<CardTypeQuantity> cardDeck, boolean available) {
 		this.displayName = displayName;
 		this.frenchName = frenchName;
