@@ -165,7 +165,7 @@ public class Game {
             if (nbJetonBataille + nbBouclier < numberJeton){
                 if (nbBouclier > 0){
                     for (int j = 0; j < nbBouclier; j++){
-                        listeJeton[nbJetonBataille] = new JetonPaix("Jeton de Bataille");
+                        listeJeton[nbJetonBataille + j] = new JetonPaix("Jeton de Bataille");
                     }
                 }
                 nbJetonBataille += nbBouclier;
