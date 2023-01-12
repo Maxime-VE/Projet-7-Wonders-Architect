@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="img" stylesheets="@css/wonder-selection.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projet7wondersarchitect.WonderSelectionController">
+   <children>
+      <ImageView fitHeight="279.0" fitWidth="165.0" layoutX="188.0" layoutY="57.0" preserveRatio="true" styleClass="wonder">
+         <image>
+            <Image url="@images/styles/alexendrie.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="testW" fitHeight="279.0" fitWidth="145.0" layoutX="305.0" layoutY="386.0" preserveRatio="true" styleClass="wonder">
+         <image>
+            <Image url="@images/styles/rodes.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="test" fitHeight="279.0" fitWidth="157.0" layoutX="427.0" layoutY="57.0" preserveRatio="true" styleClass="wonder">
+         <image>
+            <Image url="@images/styles/olympie.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="279.0" fitWidth="153.0" layoutX="559.0" layoutY="379.0" preserveRatio="true" styleClass="wonder">
+         <image>
+            <Image url="@images/styles/halicarnasse.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="279.0" fitWidth="153.0" layoutX="669.0" layoutY="57.0" preserveRatio="true" styleClass="wonder">
+         <image>
+            <Image url="@images/styles/ephese.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="279.0" fitWidth="157.0" layoutX="802.0" layoutY="379.0" preserveRatio="true" styleClass="wonder">
+         <image>
+            <Image url="@images/styles/babylone.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="279.0" fitWidth="157.0" layoutX="935.0" layoutY="57.0" preserveRatio="true" styleClass="wonder">
+         <image>
+            <Image url="@images/styles/gizeh.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="292.0" fitWidth="170.0" layoutX="182.0" layoutY="50.0">
+         <image>
+            <Image url="@images/styles/border_word(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="292.0" fitWidth="166.0" layoutX="421.0" layoutY="50.0" styleClass="border">
+         <image>
+            <Image url="@images/styles/border_word(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="288.0" fitWidth="165.0" layoutX="663.0" layoutY="52.0" styleClass="border">
+         <image>
+            <Image url="@images/styles/border_word(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="291.0" fitWidth="167.0" layoutX="929.0" layoutY="50.0" styleClass="border">
+         <image>
+            <Image url="@images/styles/border_word(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="testB" fitHeight="286.0" fitWidth="156.0" layoutX="300.0" layoutY="379.0">
+         <image>
+            <Image url="@images/styles/border_word(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="292.0" fitWidth="162.0" layoutX="553.0" layoutY="372.0" styleClass="border">
+         <image>
+            <Image url="@images/styles/border_word(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="291.0" fitWidth="167.0" layoutX="796.0" layoutY="373.0" styleClass="border">
+         <image>
+            <Image url="@images/styles/border_word(1).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="192.0" layoutY="45.0" styleClass="wonderLabel" text="ALEXENDRIE" textFill="WHITE">
+         <font>
+            <Font name="Papyrus" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="438.0" layoutY="41.0" text="OLYMPIE" textFill="WHITE">
+         <font>
+            <Font name="Papyrus" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="679.0" layoutY="46.0" text="EPHESE" textFill="WHITE">
+         <font>
+            <Font name="Papyrus" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="312.0" layoutY="373.0" text="RODES" textFill="WHITE">
+         <font>
+            <Font name="Papyrus" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="964.0" layoutY="42.0" text="GIZEH" textFill="WHITE">
+         <font>
+            <Font name="Papyrus" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="562.0" layoutY="373.0" text="HALICARNASSE" textFill="WHITE">
+         <font>
+            <Font name="Papyrus" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="811.0" layoutY="373.0" text="BABYLONE" textFill="WHITE">
+         <font>
+            <Font name="Papyrus" size="19.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="38.0" fitWidth="29.0" layoutX="188.0" layoutY="341.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/plus_button.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="29.0" layoutX="422.0" layoutY="341.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/plus_button.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="29.0" layoutX="301.0" layoutY="665.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/plus_button.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="29.0" layoutX="663.0" layoutY="339.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/plus_button.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="29.0" layoutX="556.0" layoutY="663.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/plus_button.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="29.0" layoutX="797.0" layoutY="662.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/plus_button.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
