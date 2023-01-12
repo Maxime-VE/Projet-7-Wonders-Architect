@@ -296,7 +296,7 @@ public class Game {
         else if (longueur > 1){
             //random nombre (provisoir, pour les test) + ressource merveille[nombre]
         }
-        //else si besoin
+        //else si besoin.
     }
 
     //----------------------
