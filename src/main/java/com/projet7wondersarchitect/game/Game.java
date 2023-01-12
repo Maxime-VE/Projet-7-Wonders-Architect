@@ -263,7 +263,40 @@ public class Game {
 
     public static void constructionMerveille(Player player, ArrayList<Integer> constructionsPossibles){
         //TODO FAIRE LE CHOIX DE QUELLE PIECE MONTER SI Y A LE CHOIX + ENLEVER LES CARTES UTILISEES
-        
+        int longueur = constructionsPossibles.size();
+        //int [][][] progression;
+        //switch(player.getWonder()){
+        //          case Alexandrie -> progression = progressionAlexendrie;
+        //          case Babylone -> progression = progressionBabylone;
+        //          case Gizeh -> progression = progressionGizeh;           //RECUPERATION DES CONTRAINTES
+        //          case Ephese -> progression = progressionEphese;         //DE CREATION DE LA MERVEILLE
+        //          case Halicarnasse -> progression = progressionHalicarnasse;
+        //          case Rhodes -> progression = progressionRhodes;
+        //          case Olympie -> progression = progressionOlympie;
+        //          default -> progression= new int[0][][];
+        //      }
+
+        if (longueur == 1){
+            //construction de la merveille
+        }
+        else if (longueur > 1){
+            //random nombre (provisoir, pour les test) + construction merveille[nombre]
+        }
+        //else si besoin
+    }
+
+    public static void ressourcesMerveille(Player player, ArrayList<Integer> ressourcesPossibles){
+        //TODO FAIRE LE CHOIX DE QUELLE PIECE MONTER SI Y A LE CHOIX + ENLEVER LES CARTES UTILISEES
+        int longueur = ressourcesPossibles.size();
+        //Récupération des ressources (vérif des ressources pour construction)
+
+        if (longueur == 1){
+            //transformation des gold en une des ressources possibles
+        }
+        else if (longueur > 1){
+            //random nombre (provisoir, pour les test) + ressource merveille[nombre]
+        }
+        //else si besoin
     }
 
     //----------------------
