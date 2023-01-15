@@ -11,6 +11,10 @@
   -fx-scale-y: 1.01;
 }
 
+.disableWonder{
+    -fx-opacity:0.3;
+}
+
 
 
 

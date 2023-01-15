@@ -23,4 +23,10 @@
 
 .anchorPane{
     -fx-background-color: #383838;
+    -fx-border-color: #000000;
+}
+
+.playerPane{
+    -fx-background-color: transparent;
+
 }

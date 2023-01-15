@@ -6,19 +6,29 @@ import java.util.*;
 
 public class Game {
     static Random random = new Random();
-    public static List<Player> playerList = new ArrayList<>();
+    public static ArrayList<Player> playerListGame =new ArrayList<>();
     private static Wonder wondersSelect;
 
 
     //_________________________________________________________
     // ZONE DE CREATION POUR LES TEST
     //_________________________________________________________
+    Player sancho = new Player("Sancho",15,Wonder.Alexandrie);
+
+    Player elHombre = new Player("ElHombreQueSoy",15,Wonder.Gizeh);
+
 
     //_________________________________________________________
     public static void main(String[] args) {
-        gameInitialisation(); /** On génère les les joueurs. Ils sélectionnent une merveille et se voient attribué une pioche*/
+        Player sancho = new Player("Sancho",15,Wonder.Alexandrie);
 
-        Player joueur = playerList.get(0);
+        Player elHombre = new Player("ElHombreQueSoy",15,Wonder.Gizeh);
+        playerListGame.add(sancho);
+        playerListGame.add(elHombre);
+
+        gameInitialisation(playerListGame); /** On génère les les joueurs. Ils sélectionnent une merveille et se voient attribué une pioche*/
+
+        Player joueur = playerListGame.get(0);
         drawCard(joueur.piochePersonnelle, joueur);
         drawCard(joueur.piochePersonnelle, joueur);
         System.out.println("Wonder en cours : " + joueur.getWonder());
@@ -62,59 +72,17 @@ public class Game {
         return listeCarte;
     }
 
-    public static void gameInitialisation() {
-        System.out.println("""
-                How many player want to play ?
-                (You can play between 2 and 7 players).
-                """);
-        int playerNumbers = 2;
+    public static void gameInitialisation(ArrayList<Player> playerList) {
+        int playerNumbers = playerList.size();
         int jetonNumber = nbJeton(playerNumbers);
         System.out.println("There are " + playerNumbers + " players.\n" +
-                "So, during this game, there will be " + jetonNumber + " jeton.\n" +
+                "So, during this game, there will be " + jetonNumber + " tokens.\n" +
                 "");
         System.out.println("""
 
                     ###############################################
                     """);
-        for (int i = 0; i < playerNumbers; i++) {
-            System.out.println("Enter name of player " + (i + 1) + " :");
-            String playerName = "Lachaud BG " + (i+1);
-            System.out.println("Player " + (i+1) + " names " + playerName);
-            System.out.println("Enter" + playerName + "'s age :");
-            int age = random.nextInt(99); // ATTENTION le jeu est conseillé pour des joueurs de +8 (flemme de généré un nombre > +8 pour l'instant ! ).
-            System.out.println(playerName + " is " + age + " years old\n");
-            System.out.println("""
-                    ###############################################
-                    """);
-            for (int j=0; j<1 ; j++){
-                System.out.println("Choose a deck for " + playerName + " :");
-                availableDecks();
-                int deckSelect = random.nextInt(7);
-                switch (deckSelect) {
-                    case 0 -> wondersSelect = Wonder.Alexandrie;
-                    case 1 -> wondersSelect = Wonder.Babylone;
-                    case 2 -> wondersSelect = Wonder.Ephese;
-                    case 3 -> wondersSelect = Wonder.Gizeh;
-                    case 4 -> wondersSelect = Wonder.Halicarnasse;
-                    case 5 -> wondersSelect = Wonder.Olympie;
-                    case 6 -> wondersSelect = Wonder.Rhodes;
-                }
-                if(!wondersSelect.getAvailable()) {
-                    j--;
-                    System.out.println("\n");
-                }
-            }
 
-
-            Player player = new Player(playerName, age, wondersSelect);
-            playerList.add(player);
-            wondersSelect.setAvailableFalse();
-            importDeckCard(wondersSelect, player);
-            System.out.println("""
-
-                    ###############################################
-                    """);
-        }
         playerList.sort(new AgeComparator());
         System.out.println("""
                 ##############Resume game settings##############
@@ -122,6 +90,7 @@ public class Game {
                 Game turn order whit resume of wonders selected :
                 """);
         for(Player player : playerList) {
+            importDeckCard(player.getWonder(), player);
             System.out.println(player.getName() + " with wonder deck : " + player.getWonder());
         }
     }

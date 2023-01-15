@@ -1,0 +1,6 @@
+.root{
+    -fx-background-image: url('../images/styles/sand-BG.jpg');
+    -fx-background-size: 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
