@@ -4,6 +4,8 @@ import com.projet7wondersarchitect.domain.*;
 
 import java.util.*;
 
+import static com.projet7wondersarchitect.domain.Material.*;
+
 public class Game {
     static Random random = new Random();
     public static List<Player> playerList = new ArrayList<>();
@@ -32,11 +34,17 @@ public class Game {
             for(Card c : joueur.inventory){
                 System.out.println(c.front);
             }
+            System.out.println("\n" +
+                    "Appuyez sur 1:");
             int test = scanner.nextInt();
-            verificationConstruction(joueur);
+            System.out.println("\n" +
+                    verificationConstruction(joueur));
+            System.out.println("\n" +
+                    "Appuyez sur 1:");
             test = scanner.nextInt();
-        }
 
+            constructionMerveille(joueur, verificationConstruction(joueur));
+        }
     }
 
     /** On prend en entrée un joueur et une merveille, on associe les deux dans cette fonction.*/
@@ -264,25 +272,315 @@ public class Game {
     public static void constructionMerveille(Player player, ArrayList<Integer> constructionsPossibles){
         //TODO FAIRE LE CHOIX DE QUELLE PIECE MONTER SI Y A LE CHOIX + ENLEVER LES CARTES UTILISEES
         int longueur = constructionsPossibles.size();
-        //int [][][] progression;
-        //switch(player.getWonder()){
-        //          case Alexandrie -> progression = progressionAlexendrie;
-        //          case Babylone -> progression = progressionBabylone;
-        //          case Gizeh -> progression = progressionGizeh;           //RECUPERATION DES CONTRAINTES
-        //          case Ephese -> progression = progressionEphese;         //DE CREATION DE LA MERVEILLE
-        //          case Halicarnasse -> progression = progressionHalicarnasse;
-        //          case Rhodes -> progression = progressionRhodes;
-        //          case Olympie -> progression = progressionOlympie;
-        //          default -> progression= new int[0][][];
-        //      }
+        ArrayList partieAConstruire = new ArrayList();
+        System.out.println(constructionsPossibles);
+
+        ArrayList<Card> materialCard = new ArrayList<Card>();
+        ArrayList<Card> materialCardTemporary = new ArrayList<Card>();
+        for(Card card : player.inventory){
+            if(card.front.material != null){    //RECUPERATION DES CARTES MATERIAL
+                materialCard.add(card);
+            }
+        }
+
+        int [] ressources = {0,0,0,0,0,0};
+
+        for(Card card : materialCard){
+            switch(card.front.material){
+                case Stone -> ressources[0]++;
+                case Wood -> ressources[1]++;
+                case Paper -> ressources[2]++;
+                case Brick -> ressources[3]++;   //On fait "+1" à chaque fois que la ressource correspond
+                case Glass -> ressources[4]++;
+                case Gold -> ressources[5]++;
+            }
+        }
+
+        int longueurMaterialCardTemp;
+
+        int position;
+
+        int [][][] progression;
+        switch(player.getWonder()){
+                  case Alexandrie -> progression = progressionAlexendrie;
+                  case Babylone -> progression = progressionBabylone;
+                  case Gizeh -> progression = progressionGizeh;           //RECUPERATION DES CONTRAINTES
+                  case Ephese -> progression = progressionEphese;         //DE CREATION DE LA MERVEILLE
+                  case Halicarnasse -> progression = progressionHalicarnasse;
+                  case Rhodes -> progression = progressionRhodes;
+                  case Olympie -> progression = progressionOlympie;
+                  default -> progression= new int[0][][];
+              }
+
+
+        for (int i = 0; i < longueur; i++){
+            partieAConstruire.add(progression[i]);
+        }
+        System.out.println(partieAConstruire);
 
         if (longueur == 1){
-            //construction de la merveille
+            progression[constructionsPossibles.get(0)][2][0] = 1;
+            System.out.println(progression[constructionsPossibles.get(0)][1][1] + "," + progression[constructionsPossibles.get(0)][1][0]);
+
+            if (progression[constructionsPossibles.get(0)][1][1] == 1){
+                for (int i = 0; i < progression[constructionsPossibles.get(0)][1][0]; i++){
+
+                }
+                Card carte = null;
+                for (int j = 0; j < 5; j++){
+                    carte = null;
+                    if (ressources[j] >= 1){
+                        if (j == 0){
+                            for (Card card: materialCard){
+                                if (card.front.material == Stone){
+                                    carte = card;
+                                    break;
+                                }
+                            }
+                        }
+                        else if (j == 1){
+                            for (Card card: materialCard){
+                                if (card.front.material == Wood){
+                                    carte = card;
+                                    break;
+                                }
+                            }
+                        }
+                        else if (j == 2){
+                            for (Card card: materialCard){
+                                if (card.front.material == Paper){
+                                    carte = card;
+                                    break;
+                                }
+                            }
+                        }
+                        else if (j == 3){
+                            for (Card card: materialCard){
+                                if (card.front.material == Brick){
+                                    carte = card;
+                                    break;
+                                }
+                            }
+                        }
+                        else{
+                            for (Card card: materialCard){
+                                if (card.front.material == Glass){
+                                    carte = card;
+                                    break;
+                                }
+                            }
+                        }
+                        if (carte != null){
+                            materialCardTemporary.add(carte);
+                        }
+                    }
+                }
+            }
+
+            else{
+                for (int i = 0; i < 5; i++){
+                    if (ressources[i] >= progression[constructionsPossibles.get(0)][1][0]){
+                        if (i == 0){
+                            for (int j = 0; j < progression[constructionsPossibles.get(0)][1][0]; j++){
+                                for (Card card : materialCard){
+                                    if (card.front.material == Stone){
+                                        materialCardTemporary.add(card);
+                                        materialCard.remove(card);
+                                    }
+                                    System.out.println(materialCardTemporary + "\n" +materialCard);
+                                }
+                            }
+                        }
+                        else if (i == 1){
+                            for (int j = 0; j < progression[constructionsPossibles.get(0)][1][0]; j++){
+                                for (Card card : materialCard){
+                                    if (card.front.material == Wood){
+                                        materialCardTemporary.add(card);
+                                        materialCard.remove(card);
+                                    }
+                                    System.out.println(materialCardTemporary + "\n" +materialCard);
+                                }
+                            }
+                        }
+                        else if (i == 2){
+                            for (int j = 0; j < progression[constructionsPossibles.get(0)][1][0]; j++){
+                                for (Card card : materialCard){
+                                    if (card.front.material == Paper){
+                                        materialCardTemporary.add(card);
+                                        materialCard.remove(card);
+                                    }
+                                    System.out.println(materialCardTemporary + "\n" +materialCard);
+                                }
+                            }
+                        }
+                        else if (i == 3){
+                            for (int j = 0; j < progression[constructionsPossibles.get(0)][1][0]; j++){
+                                for (Card card : materialCard){
+                                    if (card.front.material == Brick){
+                                        materialCardTemporary.add(card);
+                                        materialCard.remove(card);
+                                    }
+                                    System.out.println(materialCardTemporary + "\n" +materialCard);
+                                }
+                            }
+                        }
+                        else{
+                            for (int j = 0; j < progression[constructionsPossibles.get(0)][1][0]; j++){
+                                for (Card card : materialCard){
+                                    if (card.front.material == Glass){
+                                        materialCardTemporary.add(card);
+                                        materialCard.remove(card);
+                                    }
+                                    System.out.println(materialCardTemporary + "\n" +materialCard);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0; i < player.inventory.size(); i++){
+                for (int j = 0; j < materialCardTemporary.size(); j++){
+                    if (player.inventory.get(i) == materialCardTemporary.get(j)){
+                        player.inventory.remove(i);
+                        materialCardTemporary.remove(j);
+                    }
+                }
+            }
         }
         else if (longueur > 1){
-            //random nombre (provisoir, pour les test) + construction merveille[nombre]
+            Random construction = new Random();
+            int partie = construction.nextInt(longueur);
+            progression[constructionsPossibles.get(partie)][2][0] = 1;
+
+            if (progression[constructionsPossibles.get(partie)][1][1] == 1){
+                for (int i = 0; i < progression[constructionsPossibles.get(partie)][1][0]; i++){
+
+                }
+                Card carte = null;
+                for (int j = 0; j < 5; j++){
+                    carte = null;
+                    if (ressources[j] >= 1){
+                        if (j == 0){
+                            for (Card card: materialCard){
+                                if (card.front.material == Stone){
+                                    carte = card;
+                                    break;
+                                }
+                            }
+                        }
+                        else if (j == 1){
+                            for (Card card: materialCard){
+                                if (card.front.material == Wood){
+                                    carte = card;
+                                    break;
+                                }
+                            }
+                        }
+                        else if (j == 2){
+                            for (Card card: materialCard){
+                                if (card.front.material == Paper){
+                                    carte = card;
+                                    break;
+                                }
+                            }
+                        }
+                        else if (j == 3){
+                            for (Card card: materialCard){
+                                if (card.front.material == Brick){
+                                    carte = card;
+                                    break;
+                                }
+                            }
+                        }
+                        else{
+                            for (Card card: materialCard){
+                                if (card.front.material == Glass){
+                                    carte = card;
+                                    break;
+                                }
+                            }
+                        }
+                        if (carte != null){
+                            materialCardTemporary.add(carte);
+                        }
+                    }
+                }
+            }
+
+            else{
+                for (int i = 0; i < 5; i++){
+                    if (ressources[i] >= progression[constructionsPossibles.get(partie)][1][0]){
+                        if (i == 0){
+                            for (int j = 0; j < progression[constructionsPossibles.get(partie)][1][0]; j++){
+                                for (Card card : materialCard){
+                                    if (card.front.material == Stone){
+                                        materialCardTemporary.add(card);
+                                        materialCard.remove(card);
+                                    }
+                                    System.out.println(materialCardTemporary + "\n" +materialCard);
+                                }
+                            }
+                        }
+                        else if (i == 1){
+                            for (int j = 0; j < progression[constructionsPossibles.get(partie)][1][0]; j++){
+                                for (Card card : materialCard){
+                                    if (card.front.material == Wood){
+                                        materialCardTemporary.add(card);
+                                        materialCard.remove(card);
+                                    }
+                                    System.out.println(materialCardTemporary + "\n" +materialCard);
+                                }
+                            }
+                        }
+                        else if (i == 2){
+                            for (int j = 0; j < progression[constructionsPossibles.get(partie)][1][0]; j++){
+                                for (Card card : materialCard){
+                                    if (card.front.material == Paper){
+                                        materialCardTemporary.add(card);
+                                        materialCard.remove(card);
+                                    }
+                                    System.out.println(materialCardTemporary + "\n" +materialCard);
+                                }
+                            }
+                        }
+                        else if (i == 3){
+                            for (int j = 0; j < progression[constructionsPossibles.get(partie)][1][0]; j++){
+                                for (Card card : materialCard){
+                                    if (card.front.material == Brick){
+                                        materialCardTemporary.add(card);
+                                        materialCard.remove(card);
+                                    }
+                                    System.out.println(materialCardTemporary + "\n" +materialCard);
+                                }
+                            }
+                        }
+                        else{
+                            for (int j = 0; j < progression[constructionsPossibles.get(partie)][1][0]; j++){
+                                for (Card card : materialCard){
+                                    if (card.front.material == Glass){
+                                        materialCardTemporary.add(card);
+                                        materialCard.remove(card);
+                                    }
+                                    System.out.println(materialCardTemporary + "\n" +materialCard);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0; i < player.inventory.size(); i++){
+                for (int j = 0; j < materialCardTemporary.size(); j++){
+                    if (player.inventory.get(i) == materialCardTemporary.get(j)){
+                        player.inventory.remove(i);
+                        materialCardTemporary.remove(j);
+                    }
+                }
+            }
         }
         //else si besoin
+        System.out.println(player.inventory);
     }
 
     public static void ressourcesMerveille(Player player, ArrayList<Integer> ressourcesPossibles){
