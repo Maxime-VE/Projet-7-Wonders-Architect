@@ -4,80 +4,405 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@css/game.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projet7wondersarchitect.GameController">
+<AnchorPane fx:id="jetonConflit" prefHeight="720.0" prefWidth="1280.0" stylesheets="@css/game.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projet7wondersarchitect.GameController">
    <children>
-      <ImageView fx:id="piocheCentrale" fitHeight="142.0" fitWidth="135.0" layoutX="549.0" layoutY="255.0" preserveRatio="true">
+      <ImageView fx:id="piocheCentrale" fitHeight="192.0" fitWidth="128.0" layoutX="526.0" layoutY="247.0" preserveRatio="true">
          <image>
             <Image url="@images/cards/card-back/card-back-question.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="exemple_1" fitHeight="200.0" fitWidth="192.0" layoutX="364.0" layoutY="506.0" preserveRatio="true">
+      <ImageView fx:id="exemple_1" fitHeight="166.0" fitWidth="119.0" layoutX="620.0" layoutY="540.0" preserveRatio="true">
          <image>
             <Image url="@images/wonders/wonder-rhodes.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="120.0" fitWidth="72.0" layoutX="696.0" layoutY="277.0" preserveRatio="true">
+      <ImageView fitHeight="186.0" fitWidth="157.0" layoutX="747.0" layoutY="236.0" preserveRatio="true">
          <image>
             <Image url="@images/modele-vide/jeton_scientifique.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="64.0" fitWidth="45.0" layoutX="382.0" layoutY="277.0" preserveRatio="true">
-         <image>
-            <Image url="@images/modele-vide/jeton_paix.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="pioche2" fitHeight="200.0" fitWidth="100.0" layoutX="171.0" layoutY="247.0" preserveRatio="true">
+      <ImageView fx:id="pioche2" fitHeight="104.0" fitWidth="79.0" layoutX="907.0" layoutY="125.0" preserveRatio="true">
          <image>
             <Image url="@images/cards/card-back/card-back-question.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="121.0" fitWidth="59.0" layoutX="682.0" layoutY="372.0" preserveRatio="true">
+      <ImageView fitHeight="121.0" fitWidth="59.0" layoutX="669.0" layoutY="291.0" preserveRatio="true">
          <image>
             <Image url="@images/tokens/token-cat.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="exemple_2" fitHeight="200.0" fitWidth="192.0" layoutX="364.0" layoutY="21.0" preserveRatio="true">
-         <image>
-            <Image url="@images/wonders/wonder-rhodes.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="pioche1" fitHeight="200.0" fitWidth="100.0" layoutX="943.0" layoutY="247.0" preserveRatio="true">
+      <ImageView fx:id="pioche1" fitHeight="104.0" fitWidth="72.0" layoutX="518.0" layoutY="523.0" preserveRatio="true">
          <image>
             <Image url="@images/cards/card-back/card-back-question.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="64.0" fitWidth="45.0" layoutX="326.0" layoutY="277.0" preserveRatio="true">
+      <ImageView fx:id="jetonConflit6" fitHeight="64.0" fitWidth="45.0" layoutX="455.0" layoutY="311.0" preserveRatio="true">
          <image>
-            <Image url="@images/modele-vide/jeton_paix.png" />
+            <Image url="@images/tokens/token-conflict-peace.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="64.0" fitWidth="45.0" layoutX="437.0" layoutY="277.0" preserveRatio="true">
-         <image>
-            <Image url="@images/modele-vide/jeton_paix.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="221.0" fitWidth="287.0" layoutX="539.0" layoutY="510.0" preserveRatio="true">
+      <ImageView fx:id="board1" fitHeight="143.0" fitWidth="200.0" layoutX="743.0" layoutY="569.0" preserveRatio="true">
          <image>
             <Image url="@images/styles/inventoryBoard.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="221.0" fitWidth="287.0" layoutX="539.0" layoutY="21.0" preserveRatio="true">
+      <ImageView fx:id="stick12" fitHeight="29.0" fitWidth="209.0" layoutX="744.0" layoutY="621.0">
+         <image>
+            <Image url="@images/styles/stick.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="stick11" fitHeight="29.0" fitWidth="112.0" layoutX="787.0" layoutY="617.0" rotate="-93.7">
+         <image>
+            <Image url="@images/styles/stick.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="exemple_2" fitHeight="166.0" fitWidth="119.0" layoutX="540.0" layoutY="15.0" preserveRatio="true">
+         <image>
+            <Image url="@images/wonders/wonder-rhodes.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="board2" fitHeight="143.0" fitWidth="200.0" layoutX="668.0" layoutY="43.0" preserveRatio="true">
          <image>
             <Image url="@images/styles/inventoryBoard.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="48.0" fitWidth="270.0" layoutX="548.0" layoutY="584.0">
+      <ImageView fx:id="stick22" fitHeight="29.0" fitWidth="209.0" layoutX="669.0" layoutY="95.0">
          <image>
             <Image url="@images/styles/stick.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="48.0" fitWidth="156.0" layoutX="604.0" layoutY="582.0" rotate="-93.7">
+      <ImageView fx:id="stick21" fitHeight="29.0" fitWidth="112.0" layoutX="712.0" layoutY="91.0" rotate="-93.7">
          <image>
             <Image url="@images/styles/stick.png" />
          </image>
       </ImageView>
+      <ImageView fx:id="exemple_3" fitHeight="166.0" fitWidth="119.0" layoutX="20.0" layoutY="390.0" preserveRatio="true">
+         <image>
+            <Image url="@images/wonders/wonder-rhodes.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="board3" fitHeight="143.0" fitWidth="200.0" layoutX="20.0" layoutY="253.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/inventoryBoard.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="stick31" fitHeight="29.0" fitWidth="209.0" layoutX="21.0" layoutY="305.0">
+         <image>
+            <Image url="@images/styles/stick.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="stick32" fitHeight="29.0" fitWidth="112.0" layoutX="64.0" layoutY="301.0" rotate="-93.7">
+         <image>
+            <Image url="@images/styles/stick.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="exemple_4" fitHeight="166.0" fitWidth="119.0" layoutX="1070.0" layoutY="540.0" preserveRatio="true">
+         <image>
+            <Image url="@images/wonders/wonder-rhodes.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="board4" fitHeight="143.0" fitWidth="200.0" layoutX="1070.0" layoutY="406.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/inventoryBoard.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="stick42" fitHeight="29.0" fitWidth="209.0" layoutX="1071.0" layoutY="458.0">
+         <image>
+            <Image url="@images/styles/stick.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="stick41" fitHeight="29.0" fitWidth="112.0" layoutX="1114.0" layoutY="454.0" rotate="-93.7">
+         <image>
+            <Image url="@images/styles/stick.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="exemple_5" fitHeight="166.0" fitWidth="119.0" layoutX="150.0" layoutY="540.0" preserveRatio="true">
+         <image>
+            <Image url="@images/wonders/wonder-rhodes.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="board5" fitHeight="143.0" fitWidth="200.0" layoutX="290.0" layoutY="565.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/inventoryBoard.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="stick52" fitHeight="29.0" fitWidth="209.0" layoutX="291.0" layoutY="617.0">
+         <image>
+            <Image url="@images/styles/stick.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="stick51" fitHeight="29.0" fitWidth="112.0" layoutX="334.0" layoutY="613.0" rotate="-93.7">
+         <image>
+            <Image url="@images/styles/stick.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="exemple_6" fitHeight="166.0" fitWidth="119.0" layoutX="1060.0" layoutY="15.0" preserveRatio="true">
+         <image>
+            <Image url="@images/wonders/wonder-rhodes.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="board6" fitHeight="143.0" fitWidth="200.0" layoutX="1057.0" layoutY="195.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/inventoryBoard.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="stick62" fitHeight="29.0" fitWidth="209.0" layoutX="1058.0" layoutY="247.0">
+         <image>
+            <Image url="@images/styles/stick.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="stick61" fitHeight="29.0" fitWidth="112.0" layoutX="1101.0" layoutY="243.0" rotate="-93.7">
+         <image>
+            <Image url="@images/styles/stick.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="exemple_7" fitHeight="166.0" fitWidth="119.0" layoutX="80.0" layoutY="15.0" preserveRatio="true">
+         <image>
+            <Image url="@images/wonders/wonder-rhodes.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="board7" fitHeight="143.0" fitWidth="200.0" layoutX="211.0" layoutY="23.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/inventoryBoard.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="stick72" fitHeight="29.0" fitWidth="209.0" layoutX="207.0" layoutY="81.0">
+         <image>
+            <Image url="@images/styles/stick.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="stick71" fitHeight="29.0" fitWidth="112.0" layoutX="255.0" layoutY="81.0" rotate="-93.7">
+         <image>
+            <Image url="@images/styles/stick.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pioche5" fitHeight="104.0" fitWidth="72.0" layoutX="204.0" layoutY="423.0" preserveRatio="true">
+         <image>
+            <Image url="@images/cards/card-back/card-back-question.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pioche3" fitHeight="104.0" fitWidth="72.0" layoutX="230.0" layoutY="172.0" preserveRatio="true">
+         <image>
+            <Image url="@images/cards/card-back/card-back-question.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pioche7" fitHeight="104.0" fitWidth="72.0" layoutX="424.0" layoutY="90.0" preserveRatio="true">
+         <image>
+            <Image url="@images/cards/card-back/card-back-question.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pioche6" fitHeight="104.0" fitWidth="72.0" layoutX="983.0" layoutY="320.0" preserveRatio="true">
+         <image>
+            <Image url="@images/cards/card-back/card-back-question.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pioche4" fitHeight="104.0" fitWidth="72.0" layoutX="968.0" layoutY="501.0" preserveRatio="true">
+         <image>
+            <Image url="@images/cards/card-back/card-back-question.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="jetonConflit1" fitHeight="64.0" fitWidth="45.0" layoutX="349.0" layoutY="248.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-conflict-peace.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="jetonConflit2" fitHeight="64.0" fitWidth="45.0" layoutX="402.0" layoutY="248.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-conflict-peace.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="jetonConflit3" fitHeight="64.0" fitWidth="45.0" layoutX="455.0" layoutY="248.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-conflict-peace.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="jetonConflit4" fitHeight="64.0" fitWidth="45.0" layoutX="349.0" layoutY="311.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-conflict-peace.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="jetonConflit5" fitHeight="64.0" fitWidth="45.0" layoutX="401.0" layoutY="311.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-conflict-peace.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="alexendrieBlock" layoutX="446.0" layoutY="103.0" prefHeight="194.0" prefWidth="128.0" styleClass="wonderPane" visible="false">
+         <children>
+            <ImageView fitHeight="29.0" fitWidth="128.0" layoutX="-13.0" layoutY="160.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/alexandrie/piece-back-alexandrie-1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="72.0" layoutX="18.0" layoutY="88.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/alexandrie/piece-back-alexandrie-2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="58.0" layoutX="30.0" layoutY="50.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/alexandrie/piece-back-alexandrie-3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="88.0" layoutX="20.0" layoutY="125.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/alexandrie/piece-back-alexandrie-4.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="52.0" fitWidth="30.0" layoutX="38.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/alexandrie/piece-back-alexandrie-6.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="babyloneBlock" layoutX="616.0" layoutY="386.0" prefHeight="134.0" prefWidth="128.0" styleClass="wonderPane" visible="false">
+         <children>
+            <ImageView fitHeight="29.0" fitWidth="128.0" layoutX="-16.0" layoutY="104.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/babylon/piece-back-babylon-1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="119.0" layoutX="-13.0" layoutY="51.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/babylon/piece-back-babylon-4.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="58.0" layoutX="-6.0" layoutY="10.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/babylon/piece-back-babylon-5.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="128.0" layoutX="-17.0" layoutY="74.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/babylon/piece-back-babylon-2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="59.0" fitWidth="68.0" layoutX="33.0" layoutY="17.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/babylon/piece-back-babylon-6.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="epheseBlock" layoutX="455.0" layoutY="305.0" prefHeight="162.0" prefWidth="142.0" styleClass="wonderPane" visible="false">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="146.0" layoutX="-18.0" layoutY="129.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/ephese/piece-back-ephese-5.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="69.0" fitWidth="39.0" layoutX="41.0" layoutY="59.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/ephese/piece-back-ephese-4.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="69.0" fitWidth="48.0" layoutX="86.0" layoutY="60.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/ephese/piece-back-ephese-3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="69.0" fitWidth="58.0" layoutX="-4.0" layoutY="60.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/ephese/piece-back-ephese-2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="86.0" fitWidth="128.0" layoutX="-4.0" layoutY="14.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/ephese/piece-back-ephese-6.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="gizehBlock" layoutX="744.0" layoutY="283.0" prefHeight="153.0" prefWidth="119.0" styleClass="wonderPane" visible="false">
+         <children>
+            <ImageView fitHeight="22.0" fitWidth="120.0" layoutX="-8.0" layoutY="69.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/giseh/piece-back-giseh-1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="60.0" layoutX="17.0" layoutY="29.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/giseh/piece-back-giseh-3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="167.0" layoutX="-19.0" layoutY="90.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/babylon/piece-back-babylon-3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="95.0" layoutX="4.0" layoutY="49.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/giseh/piece-back-giseh-2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitWidth="38.0" layoutX="28.0" layoutY="-1.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/giseh/piece-back-giseh-4.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="halicarBlock" layoutX="591.0" layoutY="142.0" prefHeight="143.0" prefWidth="98.0" styleClass="wonderPane" visible="false">
+         <children>
+            <ImageView fitHeight="26.0" fitWidth="95.0" layoutX="-6.0" layoutY="118.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/halicarnasse/piece-back-halicarnasse-1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="88.0" layoutX="-2.0" layoutY="89.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/halicarnasse/piece-back-halicarnasse-2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="48.0" layoutX="-4.0" layoutY="50.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/halicarnasse/piece-back-halicarnasse-4.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="48.0" layoutX="40.0" layoutY="49.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/halicarnasse/piece-back-halicarnasse-3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="57.0" fitWidth="95.0" layoutX="-6.0" layoutY="-5.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/halicarnasse/piece-back-halicarnasse-5.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="rodesBlock" layoutX="300.0" layoutY="195.0" prefHeight="162.0" prefWidth="98.0" styleClass="wonderPane" visible="false">
+         <children>
+            <ImageView fitHeight="17.0" fitWidth="48.0" layoutX="-6.0" layoutY="145.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/rhodes/piece-back-rhodes-1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="51.0" fitWidth="72.0" layoutX="20.0" layoutY="98.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/rhodes/piece-back-rhodes-3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="51.0" fitWidth="81.0" layoutX="15.0" layoutY="56.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/rhodes/piece-back-rhodes-4.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="17.0" fitWidth="48.0" layoutX="69.0" layoutY="145.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/rhodes/piece-back-rhodes-2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="56.0" fitWidth="88.0" layoutX="15.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/rhodes/piece-back-rhodes-5.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
       <AnchorPane fx:id="preEcran" onMouseClicked="#chargementDesDonnees" opacity="0.7" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;" stylesheets="@css/player-modal.css">
          <children>
             <Label layoutX="193.0" layoutY="140.0" text="La partie va bientôt débuter ! " textFill="WHITE">
@@ -97,15 +422,40 @@
             </Label>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="48.0" fitWidth="270.0" layoutX="547.0" layoutY="94.0">
-         <image>
-            <Image url="@images/styles/stick.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="48.0" fitWidth="156.0" layoutX="603.0" layoutY="92.0" rotate="-93.7">
-         <image>
-            <Image url="@images/styles/stick.png" />
-         </image>
-      </ImageView>
+      <Label fx:id="labelJ1" layoutX="757.0" layoutY="538.0" text="Joueur" visible="false">
+         <font>
+            <Font name="Arial Nova Cond" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelJ2" layoutX="680.0" layoutY="15.0" text="Joueur" visible="false">
+         <font>
+            <Font name="Arial Nova Cond" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelJ3" layoutX="21.0" layoutY="215.0" text="Joueur" visible="false">
+         <font>
+            <Font name="Arial Nova Cond" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelJ4" layoutX="1175.0" layoutY="551.0" text="Joueur" visible="false">
+         <font>
+            <Font name="Arial Nova Cond" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelJ5" layoutX="300.0" layoutY="526.0" text="Joueur" visible="false">
+         <font>
+            <Font name="Arial Nova Cond" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelJ6" layoutX="968.0" layoutY="15.0" text="Joueur" visible="false">
+         <font>
+            <Font name="Arial Nova Cond" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelJ7" layoutX="14.0" layoutY="67.0" text="Joueur" visible="false">
+         <font>
+            <Font name="Arial Nova Cond" size="21.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

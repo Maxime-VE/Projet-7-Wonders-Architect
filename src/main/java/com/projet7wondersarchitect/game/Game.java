@@ -73,17 +73,17 @@ public class Game {
     }
 
     public static void gameInitialisation(ArrayList<Player> playerList) {
-        int playerNumbers = playerList.size();
-        int jetonNumber = nbJeton(playerNumbers);
-        System.out.println("There are " + playerNumbers + " players.\n" +
-                "So, during this game, there will be " + jetonNumber + " tokens.\n" +
-                "");
-        System.out.println("""
-
-                    ###############################################
-                    """);
-
-        playerList.sort(new AgeComparator());
+        int idAgeMin=0;
+        int ageMin=playerList.get(0).getAge();
+        for(int i=1; i < playerList.size(); i++){
+            if(playerList.get(i).getAge()<ageMin){
+                idAgeMin = i;
+            }
+        }
+        for(int i=0; i<idAgeMin; i++){
+            playerList.add(playerList.get(0));
+            playerList.remove(0);
+        }
         System.out.println("""
                 ##############Resume game settings##############
 
