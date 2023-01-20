@@ -600,7 +600,7 @@ public class Game {
                 case Babylone -> necessaryItems = progressionBabylone[stage][1];
                 case Gizeh -> necessaryItems = progressionGizeh[stage][1];
                 case Ephese -> necessaryItems = progressionEphese[stage][1];
-                case Halicarnasse -> necessaryItems = progressionHalicarnasse[stage][1];
+                case Halicarnasse -> necessaryItems = progressionHalicarnasse[stage][1]; //LOLL
                 case Rhodes -> necessaryItems = progressionRhodes[stage][1];
                 case Olympie -> necessaryItems = progressionOlympie[stage][1];
             }
