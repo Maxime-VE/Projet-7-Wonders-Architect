@@ -600,39 +600,44 @@ public class Game {
                 case Babylone -> necessaryItems = progressionBabylone[stage][1];
                 case Gizeh -> necessaryItems = progressionGizeh[stage][1];
                 case Ephese -> necessaryItems = progressionEphese[stage][1];
-                case Halicarnasse -> necessaryItems = progressionHalicarnasse[stage][1]; //LOLL
+                case Halicarnasse -> necessaryItems = progressionHalicarnasse[stage][1];
                 case Rhodes -> necessaryItems = progressionRhodes[stage][1];
                 case Olympie -> necessaryItems = progressionOlympie[stage][1];
             }
         }
-        ArrayList<Integer> playerInventory = new ArrayList<>(); // [Stone,Wood,Paper,Brick,Glass,Gold]
+        ArrayList<List> playerInventory = new ArrayList<>(); // [Gold,Glass,Brick,Paper,Wood,Stone]
+        List<Object> materialTypeNumber = new ArrayList<>();
         for(Card carType : player.inventory) {
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialGold));
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialGlass));
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialBrick));
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialPaper));
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialWood));
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialStone));
+            playerInventory.add(Arrays.asList(CardType.CardMaterialGold,Collections.frequency(player.inventory, CardType.CardMaterialGold)));
+            playerInventory.add(Arrays.asList(CardType.CardMaterialGlass,Collections.frequency(player.inventory, CardType.CardMaterialGlass)));
+            playerInventory.add(Arrays.asList(CardType.CardMaterialBrick,Collections.frequency(player.inventory, CardType.CardMaterialBrick)));
+            playerInventory.add(Arrays.asList(CardType.CardMaterialPaper,Collections.frequency(player.inventory, CardType.CardMaterialPaper)));
+            playerInventory.add(Arrays.asList(CardType.CardMaterialWood,Collections.frequency(player.inventory, CardType.CardMaterialWood)));
+            playerInventory.add(Arrays.asList(CardType.CardMaterialStone,Collections.frequency(player.inventory, CardType.CardMaterialStone)));
+
         }
+
 
         if(necessaryItems[1] == 1) {
-            int difference = 0;
-            for(Integer cardType : playerInventory) {
-                if (cardType != 0) {
-                    difference++;      //Test pour le nombre de types de cartes différents
+            int diff=0;
+            for(List list : playerInventory){
+                if(!list.get(1).equals(0)) {
+                    diff++;
                 }
-                if(difference>necessaryItems[0]) {
-                    System.out.println("Choose Material to build : ");
-                    for (Integer material : playerInventory) {
+            }
 
-                    }
-                }
-                else if (difference==necessaryItems[0]) {
-
-                }
+            if (diff>necessaryItems[0]) {
+                System.out.println("Choose " + necessaryItems + " material to build : ");
+                    System.out.println("\n");
 
             }
+            if (diff==necessaryItems[0]) {
+                for (int i = 0; i < necessaryItems[0]; i++) {
+                    //playerInventory.set(i, playerInventory[i][0] - 1);
+                }
+            }
         }
+
         if(necessaryItems[1] == 0) {
 
         }
