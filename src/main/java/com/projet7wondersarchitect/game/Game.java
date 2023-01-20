@@ -314,8 +314,9 @@ public class Game {
 
 
         for (int i = 0; i < longueur; i++){
-            partieAConstruire.add(progression[i]);
+            partieAConstruire.add(progression[constructionsPossibles.get(i)]);
         }
+        System.out.println(player.getWonder());
         System.out.println(partieAConstruire);
 
         if (longueur == 1){
@@ -323,9 +324,6 @@ public class Game {
             System.out.println(progression[constructionsPossibles.get(0)][1][1] + "," + progression[constructionsPossibles.get(0)][1][0]);
 
             if (progression[constructionsPossibles.get(0)][1][1] == 1){
-                for (int i = 0; i < progression[constructionsPossibles.get(0)][1][0]; i++){
-
-                }
                 Card carte = null;
                 for (int j = 0; j < 5; j++){
                     carte = null;
@@ -386,6 +384,7 @@ public class Game {
                                     if (card.front.material == Stone){
                                         materialCardTemporary.add(card);
                                         materialCard.remove(card);
+                                        break;
                                     }
                                     System.out.println(materialCardTemporary + "\n" +materialCard);
                                 }
@@ -397,6 +396,7 @@ public class Game {
                                     if (card.front.material == Wood){
                                         materialCardTemporary.add(card);
                                         materialCard.remove(card);
+                                        break;
                                     }
                                     System.out.println(materialCardTemporary + "\n" +materialCard);
                                 }
@@ -408,6 +408,7 @@ public class Game {
                                     if (card.front.material == Paper){
                                         materialCardTemporary.add(card);
                                         materialCard.remove(card);
+                                        break;
                                     }
                                     System.out.println(materialCardTemporary + "\n" +materialCard);
                                 }
@@ -419,6 +420,7 @@ public class Game {
                                     if (card.front.material == Brick){
                                         materialCardTemporary.add(card);
                                         materialCard.remove(card);
+                                        break;
                                     }
                                     System.out.println(materialCardTemporary + "\n" +materialCard);
                                 }
@@ -430,6 +432,7 @@ public class Game {
                                     if (card.front.material == Glass){
                                         materialCardTemporary.add(card);
                                         materialCard.remove(card);
+                                        break;
                                     }
                                     System.out.println(materialCardTemporary + "\n" +materialCard);
                                 }
@@ -454,9 +457,6 @@ public class Game {
             progression[constructionsPossibles.get(partie)][2][0] = 1;
 
             if (progression[constructionsPossibles.get(partie)][1][1] == 1){
-                for (int i = 0; i < progression[constructionsPossibles.get(partie)][1][0]; i++){
-
-                }
                 Card carte = null;
                 for (int j = 0; j < 5; j++){
                     carte = null;
@@ -517,6 +517,7 @@ public class Game {
                                     if (card.front.material == Stone){
                                         materialCardTemporary.add(card);
                                         materialCard.remove(card);
+                                        break;
                                     }
                                     System.out.println(materialCardTemporary + "\n" +materialCard);
                                 }
@@ -528,6 +529,7 @@ public class Game {
                                     if (card.front.material == Wood){
                                         materialCardTemporary.add(card);
                                         materialCard.remove(card);
+                                        break;
                                     }
                                     System.out.println(materialCardTemporary + "\n" +materialCard);
                                 }
@@ -539,6 +541,7 @@ public class Game {
                                     if (card.front.material == Paper){
                                         materialCardTemporary.add(card);
                                         materialCard.remove(card);
+                                        break;
                                     }
                                     System.out.println(materialCardTemporary + "\n" +materialCard);
                                 }
@@ -550,6 +553,7 @@ public class Game {
                                     if (card.front.material == Brick){
                                         materialCardTemporary.add(card);
                                         materialCard.remove(card);
+                                        break;
                                     }
                                     System.out.println(materialCardTemporary + "\n" +materialCard);
                                 }
@@ -561,6 +565,7 @@ public class Game {
                                     if (card.front.material == Glass){
                                         materialCardTemporary.add(card);
                                         materialCard.remove(card);
+                                        break;
                                     }
                                     System.out.println(materialCardTemporary + "\n" +materialCard);
                                 }
