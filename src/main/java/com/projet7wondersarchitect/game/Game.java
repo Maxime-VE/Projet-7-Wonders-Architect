@@ -589,8 +589,53 @@ public class Game {
     }
 
     public static void ressourcesMerveille(Player player, ArrayList<Integer> ressourcesPossibles){
-        //TODO FAIRE LE CHOIX DE QUELLE PIECE MONTER SI Y A LE CHOIX + ENLEVER LES CARTES UTILISEES
+        //Tchek ressource et quelle ressource utilisé
         int longueur = ressourcesPossibles.size();
+        ArrayList<Integer> wonderStage= new ArrayList<>();
+        wonderStage = verificationConstruction(player);
+        int[] necessaryItems = new int[0];
+        for(Integer stage : wonderStage) {
+            switch (player.getWonder()) {
+                case Alexandrie -> necessaryItems = progressionAlexendrie[stage][1];
+                case Babylone -> necessaryItems = progressionBabylone[stage][1];
+                case Gizeh -> necessaryItems = progressionGizeh[stage][1];
+                case Ephese -> necessaryItems = progressionEphese[stage][1];
+                case Halicarnasse -> necessaryItems = progressionHalicarnasse[stage][1];
+                case Rhodes -> necessaryItems = progressionRhodes[stage][1];
+                case Olympie -> necessaryItems = progressionOlympie[stage][1];
+            }
+        }
+        ArrayList<Integer> playerInventory = new ArrayList<>(); // [Stone,Wood,Paper,Brick,Glass,Gold]
+        for(Card carType : player.inventory) {
+            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialGold));
+            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialGlass));
+            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialBrick));
+            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialPaper));
+            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialWood));
+            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialStone));
+        }
+
+        if(necessaryItems[1] == 1) {
+            int difference = 0;
+            for(Integer cardType : playerInventory) {
+                if (cardType != 0) {
+                    difference++;      //Test pour le nombre de types de cartes différents
+                }
+                if(difference>necessaryItems[0]) {
+                    System.out.println("Choose Material to build : ");
+                    for (Integer material : playerInventory) {
+
+                    }
+                }
+                else if (difference==necessaryItems[0]) {
+
+                }
+
+            }
+        }
+        if(necessaryItems[1] == 0) {
+
+        }
         //Récupération des ressources (vérif des ressources pour construction)
 
         if (longueur == 1){
@@ -600,6 +645,7 @@ public class Game {
             //random nombre (provisoir, pour les test) + ressource merveille[nombre]
         }
         //else si besoin.
+
     }
 
     //----------------------
