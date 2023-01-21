@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="img" stylesheets="@css/wonder-selection.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projet7wondersarchitect.WonderSelectionController">
+   <children>
+      <ImageView fx:id="imageAlexendrie" fitHeight="279.0" fitWidth="165.0" layoutX="189.0" layoutY="82.0" onMouseClicked="#choixAlexendrie" preserveRatio="true" styleClass="wonder">
+         <image>
+            <Image url="@images/styles/alexendrie.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageRodes" fitHeight="279.0" fitWidth="145.0" layoutX="306.0" layoutY="411.0" onMouseClicked="#choixRodes" preserveRatio="true" styleClass="wonder">
+         <image>
+            <Image url="@images/styles/rodes.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageOlympie" fitHeight="279.0" fitWidth="157.0" layoutX="428.0" layoutY="82.0" onMouseClicked="#choixOlympie" preserveRatio="true" styleClass="wonder">
+         <image>
+            <Image url="@images/styles/olympie.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageHalicarnasse" fitHeight="279.0" fitWidth="153.0" layoutX="560.0" layoutY="404.0" onMouseClicked="#choixHalicarnasse" preserveRatio="true" styleClass="wonder">
+         <image>
+            <Image url="@images/styles/halicarnasse.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageEphese" fitHeight="279.0" fitWidth="153.0" layoutX="670.0" layoutY="82.0" onMouseClicked="#choixEphese" preserveRatio="true" styleClass="wonder">
+         <image>
+            <Image url="@images/styles/ephese.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageBabylone" fitHeight="279.0" fitWidth="157.0" layoutX="803.0" layoutY="404.0" onMouseClicked="#choixBabylone" preserveRatio="true" styleClass="wonder">
+         <image>
+            <Image url="@images/styles/babylone.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageGizeh" fitHeight="279.0" fitWidth="157.0" layoutX="936.0" layoutY="82.0" onMouseClicked="#choixGizeh" preserveRatio="true" styleClass="wonder">
+         <image>
+            <Image url="@images/styles/gizeh.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="borderAlexendrie" fitHeight="292.0" fitWidth="170.0" layoutX="183.0" layoutY="75.0" onMouseClicked="#choixAlexendrie">
+         <image>
+            <Image url="@images/styles/border_word(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="borderOlympie" fitHeight="292.0" fitWidth="166.0" layoutX="422.0" layoutY="75.0" onMouseClicked="#choixOlympie" styleClass="border">
+         <image>
+            <Image url="@images/styles/border_word(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="borderEphese" fitHeight="288.0" fitWidth="165.0" layoutX="664.0" layoutY="77.0" onMouseClicked="#choixEphese" styleClass="border">
+         <image>
+            <Image url="@images/styles/border_word(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="borderGizeh" fitHeight="291.0" fitWidth="167.0" layoutX="930.0" layoutY="75.0" onMouseClicked="#choixGizeh" styleClass="border">
+         <image>
+            <Image url="@images/styles/border_word(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="borderRodes" fitHeight="286.0" fitWidth="156.0" layoutX="301.0" layoutY="404.0" onMouseClicked="#choixRodes">
+         <image>
+            <Image url="@images/styles/border_word(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="borderHalicarnasse" fitHeight="292.0" fitWidth="162.0" layoutX="554.0" layoutY="397.0" onMouseClicked="#choixHalicarnasse" styleClass="border">
+         <image>
+            <Image url="@images/styles/border_word(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="borderBabylone" fitHeight="291.0" fitWidth="167.0" layoutX="797.0" layoutY="398.0" onMouseClicked="#choixBabylone" styleClass="border">
+         <image>
+            <Image url="@images/styles/border_word(1).png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelAlexendrie" layoutX="193.0" layoutY="70.0" onMouseClicked="#choixAlexendrie" styleClass="wonderLabel" text="ALEXANDRIE" textFill="WHITE">
+         <font>
+            <Font name="Papyrus" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelOlympie" layoutX="439.0" layoutY="66.0" onMouseClicked="#choixOlympie" text="OLYMPIE" textFill="WHITE">
+         <font>
+            <Font name="Papyrus" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelEphese" layoutX="680.0" layoutY="71.0" onMouseClicked="#choixEphese" text="EPHESE" textFill="WHITE">
+         <font>
+            <Font name="Papyrus" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelRodes" layoutX="312.0" layoutY="398.0" onMouseClicked="#choixRodes" text="RHODES" textFill="WHITE">
+         <font>
+            <Font name="Papyrus" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelGizeh" layoutX="965.0" layoutY="67.0" onMouseClicked="#choixGizeh" text="GIZEH" textFill="WHITE">
+         <font>
+            <Font name="Papyrus" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelHalicarnasse" layoutX="563.0" layoutY="398.0" onMouseClicked="#choixHalicarnasse" text="HALICARNASSE" textFill="WHITE">
+         <font>
+            <Font name="Papyrus" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelBabylone" layoutX="812.0" layoutY="398.0" onMouseClicked="#choixBabylone" text="BABYLONE" textFill="WHITE">
+         <font>
+            <Font name="Papyrus" size="19.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="38.0" fitWidth="29.0" layoutX="189.0" layoutY="366.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/plus_button.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="29.0" layoutX="423.0" layoutY="366.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/plus_button.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="29.0" layoutX="302.0" layoutY="690.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/plus_button.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="29.0" layoutX="664.0" layoutY="364.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/plus_button.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="29.0" layoutX="557.0" layoutY="688.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/plus_button.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="29.0" layoutX="798.0" layoutY="687.0" preserveRatio="true">
+         <image>
+            <Image url="@images/styles/plus_button.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelJoueur" layoutX="450.0" onMouseClicked="#testValue" text="Joueur 1 choisit sa merveille" textFill="WHITE">
+         <font>
+            <Font name="Papyrus" size="32.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

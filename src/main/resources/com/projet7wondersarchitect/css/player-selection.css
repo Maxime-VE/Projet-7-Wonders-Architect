@@ -1,0 +1,32 @@
+.root{
+    -fx-background-image: url('../images/styles/character-bg.jpg');
+    -fx-background-size: 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.slider .fill {
+    -fx-background-color: #00828b;
+    -fx-padding: 0.333333em;
+}
+
+.slider .fill:hover{
+    -fx-background-color: #219297;
+}
+
+.slider > .track{
+    -fx-background-color: #9e9e9e;
+}
+
+.slider > .thumb{
+    -fx-background-color: #e3e3e3;}
+
+.anchorPane{
+    -fx-background-color: #383838;
+    -fx-border-color: #000000;
+}
+
+.playerPane{
+    -fx-background-color: transparent;
+
+}

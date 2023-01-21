@@ -8,13 +8,11 @@ import javafx.scene.control.Label;
 import java.io.IOException;
 
 public class HelloController {
-    @FXML
-    private Label welcomeText;
 
     @FXML
     public void onPlayButtonClick() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("game-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1200, 675);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("player-selection-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
         HelloApplication.currentStage.setScene(scene);
         HelloApplication.currentStage.show();
     }

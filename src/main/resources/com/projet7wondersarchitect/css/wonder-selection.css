@@ -1,0 +1,20 @@
+.root{
+    -fx-background-image: url('../images/styles/old_BG.jpg');
+    -fx-background-size: 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.wonder:hover{
+  -fx-opacity: .45;
+  -fx-scale-x: 1.01;
+  -fx-scale-y: 1.01;
+}
+
+.disableWonder{
+    -fx-opacity:0.3;
+}
+
+
+
+
