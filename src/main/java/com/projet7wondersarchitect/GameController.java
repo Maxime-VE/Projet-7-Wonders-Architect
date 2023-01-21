@@ -3,7 +3,9 @@ package com.projet7wondersarchitect;
 import com.projet7wondersarchitect.domain.Wonder;
 import com.projet7wondersarchitect.game.Game;
 import com.projet7wondersarchitect.game.Player;
+import javafx.event.EventTarget;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -185,12 +187,16 @@ public class GameController {
     private Pane gizehBlock;
 
     @FXML
+    private Pane olympieBlock;
+
+    @FXML
     private Pane halicarBlock;
 
     @FXML
     private Pane rodesBlock;
 
     private int idPlayer=0;
+    private Player player;
 
     private int jetonNumber;
 
@@ -250,7 +256,7 @@ public class GameController {
         for (int i=0; i<playerList.size(); i++){
             switch (i){
                 case 0:
-                    Player player = playerList.get(i);
+                    player = playerList.get(i);
                     pioche1.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream(player.piochePersonnelle.get(0).front.imageResource))));
                     pioche1.setVisible(true);
                     placementMerveille(i,player.getWonder());
@@ -323,8 +329,46 @@ public class GameController {
             }
         }
         Player joueur = playerList.get(idPlayer);
+        preparationActionJoueur(joueur, idPlayer);
 
 
+    }
+
+    void preparationActionJoueur(Player player, int idPlayer){
+        switch (idPlayer){
+            case 0:
+                labelJ1.setStyle("-fx-background-color:#22d460");
+                break;
+            case 1:
+                labelJ2.setStyle("-fx-background-color:#22d460");
+                break;
+            case 2:
+                labelJ3.setStyle("-fx-background-color:#22d460");
+                break;
+            case 3:
+                labelJ4.setStyle("-fx-background-color:#22d460");
+                break;
+            case 4:
+                labelJ5.setStyle("-fx-background-color:#22d460");
+                break;
+            case 5:
+                labelJ6.setStyle("-fx-background-color:#22d460");
+                break;
+            case 6:
+                labelJ7.setStyle("-fx-background-color:#22d460");
+                break;
+        }
+    }
+
+    @FXML
+    void actionJoueur(MouseEvent event){
+        Node source = (Node) event.getSource();
+        String id = source.getId();
+        switch(id){
+            case "pioche1":
+
+
+        }
     }
 
     void placementMerveille(int numeroJoueur, Wonder wonder) {
@@ -340,7 +384,7 @@ public class GameController {
                     alexendrieBlock.setLayoutX(540);
                     alexendrieBlock.setLayoutY(15);
                 }
-                case 2 -> {
+                case 5 -> {
                     alexendrieBlock.setVisible(true);
                     alexendrieBlock.setLayoutX(20);
                     alexendrieBlock.setLayoutY(390);
@@ -352,18 +396,19 @@ public class GameController {
                 }
                 case 4 -> {
                     alexendrieBlock.setVisible(true);
-                    alexendrieBlock.setLayoutX(150);
-                    alexendrieBlock.setLayoutY(540);
+                    alexendrieBlock.setLayoutX(80);
+                    alexendrieBlock.setLayoutY(15);
                 }
-                case 5 -> {
+                case 2 -> {
                     alexendrieBlock.setVisible(true);
                     alexendrieBlock.setLayoutX(1060);
                     alexendrieBlock.setLayoutY(15);
                 }
                 default -> {
+
                     alexendrieBlock.setVisible(true);
-                    alexendrieBlock.setLayoutX(80);
-                    alexendrieBlock.setLayoutY(15);
+                    alexendrieBlock.setLayoutX(150);
+                    alexendrieBlock.setLayoutY(540);
                 }
             }
         }if(wonder == Wonder.Halicarnasse){
@@ -554,6 +599,44 @@ public class GameController {
                     gizehBlock.setVisible(true);
                     gizehBlock.setLayoutX(80);
                     gizehBlock.setLayoutY(15);
+                }
+            }
+        }if(wonder == Wonder.Olympie) {
+            switch (numeroJoueur) {
+                case 0 -> {
+                    olympieBlock.setVisible(true);
+                    olympieBlock.setLayoutX(620);
+                    olympieBlock.setLayoutY(520);
+                }
+                case 1 -> {
+                    olympieBlock.setVisible(true);
+                    olympieBlock.setLayoutX(540);
+                    olympieBlock.setLayoutY(15);
+                }
+                case 2 -> {
+                    olympieBlock.setVisible(true);
+                    olympieBlock.setLayoutX(20);
+                    olympieBlock.setLayoutY(390);
+                }
+                case 3 -> {
+                    olympieBlock.setVisible(true);
+                    olympieBlock.setLayoutX(1070);
+                    olympieBlock.setLayoutY(540);
+                }
+                case 4 -> {
+                    olympieBlock.setVisible(true);
+                    olympieBlock.setLayoutX(150);
+                    olympieBlock.setLayoutY(540);
+                }
+                case 5 -> {
+                    olympieBlock.setVisible(true);
+                    olympieBlock.setLayoutX(1060);
+                    olympieBlock.setLayoutY(15);
+                }
+                default -> {
+                    olympieBlock.setVisible(true);
+                    olympieBlock.setLayoutX(80);
+                    olympieBlock.setLayoutY(15);
                 }
             }
         }

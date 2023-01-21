@@ -24,7 +24,7 @@
             <Image url="@images/modele-vide/jeton_scientifique.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pioche2" fitHeight="104.0" fitWidth="79.0" layoutX="907.0" layoutY="125.0" preserveRatio="true">
+      <ImageView fx:id="pioche2" disable="true" fitHeight="104.0" fitWidth="79.0" layoutX="235.0" layoutY="404.0" onMouseClicked="#actionJoueur" preserveRatio="true">
          <image>
             <Image url="@images/cards/card-back/card-back-question.png" />
          </image>
@@ -34,7 +34,7 @@
             <Image url="@images/tokens/token-cat.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pioche1" fitHeight="104.0" fitWidth="72.0" layoutX="518.0" layoutY="523.0" preserveRatio="true">
+      <ImageView fx:id="pioche1" fitHeight="104.0" fitWidth="72.0" layoutX="518.0" layoutY="523.0" onMouseClicked="#actionJoueur" preserveRatio="true">
          <image>
             <Image url="@images/cards/card-back/card-back-question.png" />
          </image>
@@ -59,22 +59,22 @@
             <Image url="@images/styles/stick.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="exemple_2" fitHeight="166.0" fitWidth="119.0" layoutX="540.0" layoutY="15.0" preserveRatio="true">
+      <ImageView fx:id="exemple_2" fitHeight="166.0" fitWidth="119.0" layoutX="150.0" layoutY="511.0" preserveRatio="true">
          <image>
             <Image url="@images/wonders/wonder-rhodes.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="board2" fitHeight="143.0" fitWidth="200.0" layoutX="668.0" layoutY="43.0" preserveRatio="true">
+      <ImageView fx:id="board2" fitHeight="143.0" fitWidth="200.0" layoutX="278.0" layoutY="539.0" preserveRatio="true">
          <image>
             <Image url="@images/styles/inventoryBoard.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="stick22" fitHeight="29.0" fitWidth="209.0" layoutX="669.0" layoutY="95.0">
+      <ImageView fx:id="stick22" fitHeight="29.0" fitWidth="209.0" layoutX="279.0" layoutY="591.0">
          <image>
             <Image url="@images/styles/stick.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="stick21" fitHeight="29.0" fitWidth="112.0" layoutX="712.0" layoutY="91.0" rotate="-93.7">
+      <ImageView fx:id="stick21" fitHeight="29.0" fitWidth="112.0" layoutX="322.0" layoutY="587.0" rotate="-93.7">
          <image>
             <Image url="@images/styles/stick.png" />
          </image>
@@ -99,42 +99,42 @@
             <Image url="@images/styles/stick.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="exemple_4" fitHeight="166.0" fitWidth="119.0" layoutX="1070.0" layoutY="540.0" preserveRatio="true">
+      <ImageView fx:id="exemple_4" fitHeight="166.0" fitWidth="119.0" layoutX="66.0" layoutY="49.0" preserveRatio="true">
          <image>
             <Image url="@images/wonders/wonder-rhodes.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="board4" fitHeight="143.0" fitWidth="200.0" layoutX="1070.0" layoutY="406.0" preserveRatio="true">
+      <ImageView fx:id="board4" fitHeight="143.0" fitWidth="200.0" layoutX="209.0" layoutY="23.0" preserveRatio="true">
          <image>
             <Image url="@images/styles/inventoryBoard.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="stick42" fitHeight="29.0" fitWidth="209.0" layoutX="1071.0" layoutY="458.0">
+      <ImageView fx:id="stick42" fitHeight="29.0" fitWidth="209.0" layoutX="210.0" layoutY="75.0">
          <image>
             <Image url="@images/styles/stick.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="stick41" fitHeight="29.0" fitWidth="112.0" layoutX="1114.0" layoutY="454.0" rotate="-93.7">
+      <ImageView fx:id="stick41" fitHeight="29.0" fitWidth="112.0" layoutX="253.0" layoutY="71.0" rotate="-93.7">
          <image>
             <Image url="@images/styles/stick.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="exemple_5" fitHeight="166.0" fitWidth="119.0" layoutX="150.0" layoutY="540.0" preserveRatio="true">
+      <ImageView fx:id="exemple_5" fitHeight="166.0" fitWidth="119.0" layoutX="553.0" layoutY="10.0" preserveRatio="true">
          <image>
             <Image url="@images/wonders/wonder-rhodes.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="board5" fitHeight="143.0" fitWidth="200.0" layoutX="290.0" layoutY="565.0" preserveRatio="true">
+      <ImageView fx:id="board5" fitHeight="143.0" fitWidth="200.0" layoutX="693.0" layoutY="35.0" preserveRatio="true">
          <image>
             <Image url="@images/styles/inventoryBoard.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="stick52" fitHeight="29.0" fitWidth="209.0" layoutX="291.0" layoutY="617.0">
+      <ImageView fx:id="stick52" fitHeight="29.0" fitWidth="209.0" layoutX="694.0" layoutY="87.0">
          <image>
             <Image url="@images/styles/stick.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="stick51" fitHeight="29.0" fitWidth="112.0" layoutX="334.0" layoutY="613.0" rotate="-93.7">
+      <ImageView fx:id="stick51" fitHeight="29.0" fitWidth="112.0" layoutX="737.0" layoutY="83.0" rotate="-93.7">
          <image>
             <Image url="@images/styles/stick.png" />
          </image>
@@ -159,47 +159,47 @@
             <Image url="@images/styles/stick.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="exemple_7" fitHeight="166.0" fitWidth="119.0" layoutX="80.0" layoutY="15.0" preserveRatio="true">
+      <ImageView fx:id="exemple_7" fitHeight="166.0" fitWidth="119.0" layoutX="1064.0" layoutY="535.0" preserveRatio="true">
          <image>
             <Image url="@images/wonders/wonder-rhodes.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="board7" fitHeight="143.0" fitWidth="200.0" layoutX="211.0" layoutY="23.0" preserveRatio="true">
+      <ImageView fx:id="board7" fitHeight="143.0" fitWidth="200.0" layoutX="1055.0" layoutY="404.0" preserveRatio="true">
          <image>
             <Image url="@images/styles/inventoryBoard.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="stick72" fitHeight="29.0" fitWidth="209.0" layoutX="207.0" layoutY="81.0">
+      <ImageView fx:id="stick72" fitHeight="29.0" fitWidth="209.0" layoutX="1051.0" layoutY="462.0">
          <image>
             <Image url="@images/styles/stick.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="stick71" fitHeight="29.0" fitWidth="112.0" layoutX="255.0" layoutY="81.0" rotate="-93.7">
+      <ImageView fx:id="stick71" fitHeight="29.0" fitWidth="112.0" layoutX="1099.0" layoutY="447.0" rotate="-93.7">
          <image>
             <Image url="@images/styles/stick.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pioche5" fitHeight="104.0" fitWidth="72.0" layoutX="204.0" layoutY="423.0" preserveRatio="true">
+      <ImageView fx:id="pioche5" fitHeight="104.0" fitWidth="72.0" layoutX="916.0" layoutY="129.0" onMouseClicked="#actionJoueur" preserveRatio="true">
          <image>
             <Image url="@images/cards/card-back/card-back-question.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pioche3" fitHeight="104.0" fitWidth="72.0" layoutX="230.0" layoutY="172.0" preserveRatio="true">
+      <ImageView fx:id="pioche3" fitHeight="104.0" fitWidth="72.0" layoutX="230.0" layoutY="172.0" onMouseClicked="#actionJoueur" preserveRatio="true">
          <image>
             <Image url="@images/cards/card-back/card-back-question.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pioche7" fitHeight="104.0" fitWidth="72.0" layoutX="424.0" layoutY="90.0" preserveRatio="true">
+      <ImageView fx:id="pioche7" disable="true" fitHeight="104.0" fitWidth="72.0" layoutX="978.0" layoutY="498.0" onMouseClicked="#actionJoueur" preserveRatio="true">
          <image>
             <Image url="@images/cards/card-back/card-back-question.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pioche6" fitHeight="104.0" fitWidth="72.0" layoutX="983.0" layoutY="320.0" preserveRatio="true">
+      <ImageView fx:id="pioche6" disable="true" fitHeight="104.0" fitWidth="72.0" layoutX="971.0" layoutY="320.0" onMouseClicked="#actionJoueur" preserveRatio="true">
          <image>
             <Image url="@images/cards/card-back/card-back-question.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pioche4" fitHeight="104.0" fitWidth="72.0" layoutX="968.0" layoutY="501.0" preserveRatio="true">
+      <ImageView fx:id="pioche4" disable="true" fitHeight="104.0" fitWidth="72.0" layoutX="454.0" layoutY="129.0" onMouseClicked="#actionJoueur" preserveRatio="true">
          <image>
             <Image url="@images/cards/card-back/card-back-question.png" />
          </image>
@@ -403,25 +403,35 @@
             </ImageView>
          </children>
       </Pane>
-      <AnchorPane fx:id="preEcran" onMouseClicked="#chargementDesDonnees" opacity="0.7" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;" stylesheets="@css/player-modal.css">
+      <Pane fx:id="olympieBlock" layoutX="620.0" layoutY="540.0" prefHeight="162.0" prefWidth="98.0" styleClass="wonderPane" visible="false">
          <children>
-            <Label layoutX="193.0" layoutY="140.0" text="La partie va bientôt débuter ! " textFill="WHITE">
-               <font>
-                  <Font name="Papyrus" size="71.0" />
-               </font>
-            </Label>
-            <Label layoutX="282.0" layoutY="501.0" text="Cliquez sur l'écran pour passer à la suite" textFill="WHITE">
-               <font>
-                  <Font name="Papyrus" size="42.0" />
-               </font>
-            </Label>
-            <Label layoutX="393.0" layoutY="231.0" text="Vous êtes prêt ?" textFill="WHITE">
-               <font>
-                  <Font name="Papyrus" size="71.0" />
-               </font>
-            </Label>
+            <ImageView fitHeight="38.0" fitWidth="128.0" layoutX="-11.0" layoutY="128.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/olympie/wonder_zeus_back_1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="47.0" fitWidth="53.0" layoutX="1.0" layoutY="84.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/olympie/wonder_zeus_back_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="58.0" layoutX="49.0" layoutY="83.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/olympie/wonder_zeus_back_3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="47.0" fitWidth="107.0" layoutY="38.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/olympie/wonder_zeus_back_4.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="56.0" fitWidth="113.0" layoutX="-3.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/wonders/olympie/wonder_zeus_back_5.png" />
+               </image>
+            </ImageView>
          </children>
-      </AnchorPane>
+      </Pane>
       <Label fx:id="labelJ1" layoutX="757.0" layoutY="538.0" text="Joueur" visible="false">
          <font>
             <Font name="Arial Nova Cond" size="21.0" />
@@ -457,5 +467,184 @@
             <Font name="Arial Nova Cond" size="21.0" />
          </font>
       </Label>
+      <ImageView fx:id="inventoryRessource_10" fitHeight="21.0" fitWidth="22.0" layoutX="746.0" layoutY="578.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_11" fitHeight="21.0" fitWidth="22.0" layoutX="769.0" layoutY="578.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(6).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_12" fitHeight="21.0" fitWidth="22.0" layoutX="793.0" layoutY="578.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(3).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_13" fitHeight="21.0" fitWidth="22.0" layoutX="814.0" layoutY="578.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(4).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_14" fitHeight="21.0" fitWidth="22.0" layoutX="746.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(5).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_15" fitHeight="21.0" fitWidth="22.0" layoutX="769.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(4).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_16" fitHeight="21.0" fitWidth="22.0" layoutX="793.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(6).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_17" fitHeight="21.0" fitWidth="22.0" layoutX="816.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(4).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_50" fitHeight="21.0" fitWidth="22.0" layoutX="698.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_51" fitHeight="21.0" fitWidth="22.0" layoutX="721.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(6).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_121" fitHeight="21.0" fitWidth="22.0" layoutX="745.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(3).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_131" fitHeight="21.0" fitWidth="22.0" layoutX="766.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(4).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_141" fitHeight="21.0" fitWidth="22.0" layoutX="698.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(5).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_151" fitHeight="21.0" fitWidth="22.0" layoutX="721.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(4).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_161" fitHeight="21.0" fitWidth="22.0" layoutX="745.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(6).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_171" fitHeight="21.0" fitWidth="22.0" layoutX="768.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(4).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_102" fitHeight="21.0" fitWidth="22.0" layoutX="282.0" layoutY="548.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_112" fitHeight="21.0" fitWidth="22.0" layoutX="305.0" layoutY="548.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(6).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_122" fitHeight="21.0" fitWidth="22.0" layoutX="329.0" layoutY="548.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(3).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_132" fitHeight="21.0" fitWidth="22.0" layoutX="350.0" layoutY="548.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(4).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_142" fitHeight="21.0" fitWidth="22.0" layoutX="282.0" layoutY="577.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(5).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_152" fitHeight="21.0" fitWidth="22.0" layoutX="305.0" layoutY="577.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(4).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_162" fitHeight="21.0" fitWidth="22.0" layoutX="329.0" layoutY="577.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(6).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_172" fitHeight="21.0" fitWidth="22.0" layoutX="352.0" layoutY="577.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(4).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_70" fitHeight="21.0" fitWidth="22.0" layoutX="1058.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_71" fitHeight="21.0" fitWidth="22.0" layoutX="1081.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(6).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_72" fitHeight="21.0" fitWidth="22.0" layoutX="1105.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(3).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_73" fitHeight="21.0" fitWidth="22.0" layoutX="1126.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(4).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_74" fitHeight="21.0" fitWidth="22.0" layoutX="1058.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(5).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_75" fitHeight="21.0" fitWidth="22.0" layoutX="1081.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(4).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_76" fitHeight="21.0" fitWidth="22.0" layoutX="1105.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(6).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventoryRessource_77" fitHeight="21.0" fitWidth="22.0" layoutX="1128.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon/cartes-modified(4).png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="preEcran" onMouseClicked="#chargementDesDonnees" opacity="0.7" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;" stylesheets="@css/player-modal.css">
+         <children>
+            <Label layoutX="193.0" layoutY="140.0" text="La partie va bientôt débuter ! " textFill="WHITE">
+               <font>
+                  <Font name="Papyrus" size="71.0" />
+               </font>
+            </Label>
+            <Label layoutX="282.0" layoutY="501.0" text="Cliquez sur l'écran pour passer à la suite" textFill="WHITE">
+               <font>
+                  <Font name="Papyrus" size="42.0" />
+               </font>
+            </Label>
+            <Label layoutX="393.0" layoutY="231.0" text="Vous êtes prêt ?" textFill="WHITE">
+               <font>
+                  <Font name="Papyrus" size="71.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
