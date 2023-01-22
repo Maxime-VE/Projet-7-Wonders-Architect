@@ -379,27 +379,27 @@ public class GameController {
                     alexendrieBlock.setLayoutX(620);
                     alexendrieBlock.setLayoutY(520);
                 }
-                case 1 -> {
+                case 4 -> {
                     alexendrieBlock.setVisible(true);
                     alexendrieBlock.setLayoutX(540);
                     alexendrieBlock.setLayoutY(15);
                 }
-                case 5 -> {
+                case 2 -> {
                     alexendrieBlock.setVisible(true);
                     alexendrieBlock.setLayoutX(20);
                     alexendrieBlock.setLayoutY(390);
                 }
-                case 3 -> {
+                case 6 -> {
                     alexendrieBlock.setVisible(true);
                     alexendrieBlock.setLayoutX(1070);
                     alexendrieBlock.setLayoutY(540);
                 }
-                case 4 -> {
+                case 3 -> {
                     alexendrieBlock.setVisible(true);
                     alexendrieBlock.setLayoutX(80);
                     alexendrieBlock.setLayoutY(15);
                 }
-                case 2 -> {
+                case 5 -> {
                     alexendrieBlock.setVisible(true);
                     alexendrieBlock.setLayoutX(1060);
                     alexendrieBlock.setLayoutY(15);
@@ -418,7 +418,7 @@ public class GameController {
                     halicarBlock.setLayoutX(620);
                     halicarBlock.setLayoutY(520);
                 }
-                case 1 -> {
+                case 4 -> {
                     halicarBlock.setVisible(true);
                     halicarBlock.setLayoutX(540);
                     halicarBlock.setLayoutY(15);
@@ -428,12 +428,12 @@ public class GameController {
                     halicarBlock.setLayoutX(20);
                     halicarBlock.setLayoutY(390);
                 }
-                case 3 -> {
+                case 6 -> {
                     halicarBlock.setVisible(true);
                     halicarBlock.setLayoutX(1070);
                     halicarBlock.setLayoutY(540);
                 }
-                case 4 -> {
+                case 3 -> {
                     halicarBlock.setVisible(true);
                     halicarBlock.setLayoutX(150);
                     halicarBlock.setLayoutY(540);
@@ -456,7 +456,7 @@ public class GameController {
                     rodesBlock.setLayoutX(620);
                     rodesBlock.setLayoutY(520);
                 }
-                case 1 -> {
+                case 4 -> {
                     rodesBlock.setVisible(true);
                     rodesBlock.setLayoutX(540);
                     rodesBlock.setLayoutY(15);
@@ -466,12 +466,12 @@ public class GameController {
                     rodesBlock.setLayoutX(20);
                     rodesBlock.setLayoutY(390);
                 }
-                case 3 -> {
+                case 6 -> {
                     rodesBlock.setVisible(true);
                     rodesBlock.setLayoutX(1070);
                     rodesBlock.setLayoutY(540);
                 }
-                case 4 -> {
+                case 3 -> {
                     rodesBlock.setVisible(true);
                     rodesBlock.setLayoutX(150);
                     rodesBlock.setLayoutY(540);
@@ -494,7 +494,7 @@ public class GameController {
                     epheseBlock.setLayoutX(620);
                     epheseBlock.setLayoutY(520);
                 }
-                case 1 -> {
+                case 4 -> {
                     epheseBlock.setVisible(true);
                     epheseBlock.setLayoutX(540);
                     epheseBlock.setLayoutY(15);
@@ -504,12 +504,12 @@ public class GameController {
                     epheseBlock.setLayoutX(20);
                     epheseBlock.setLayoutY(390);
                 }
-                case 3 -> {
+                case 6 -> {
                     epheseBlock.setVisible(true);
                     epheseBlock.setLayoutX(1070);
                     epheseBlock.setLayoutY(540);
                 }
-                case 4 -> {
+                case 3 -> {
                     epheseBlock.setVisible(true);
                     epheseBlock.setLayoutX(150);
                     epheseBlock.setLayoutY(540);
@@ -532,7 +532,7 @@ public class GameController {
                     babyloneBlock.setLayoutX(620);
                     babyloneBlock.setLayoutY(520);
                 }
-                case 1 -> {
+                case 4 -> {
                     babyloneBlock.setVisible(true);
                     babyloneBlock.setLayoutX(540);
                     babyloneBlock.setLayoutY(15);
@@ -542,12 +542,12 @@ public class GameController {
                     babyloneBlock.setLayoutX(20);
                     babyloneBlock.setLayoutY(390);
                 }
-                case 3 -> {
+                case 6 -> {
                     babyloneBlock.setVisible(true);
                     babyloneBlock.setLayoutX(1070);
                     babyloneBlock.setLayoutY(540);
                 }
-                case 4 -> {
+                case 3 -> {
                     babyloneBlock.setVisible(true);
                     babyloneBlock.setLayoutX(150);
                     babyloneBlock.setLayoutY(540);
@@ -570,7 +570,7 @@ public class GameController {
                     gizehBlock.setLayoutX(620);
                     gizehBlock.setLayoutY(520);
                 }
-                case 1 -> {
+                case 4 -> {
                     gizehBlock.setVisible(true);
                     gizehBlock.setLayoutX(540);
                     gizehBlock.setLayoutY(15);
@@ -580,12 +580,12 @@ public class GameController {
                     gizehBlock.setLayoutX(20);
                     gizehBlock.setLayoutY(390);
                 }
-                case 3 -> {
+                case 6 -> {
                     gizehBlock.setVisible(true);
                     gizehBlock.setLayoutX(1070);
                     gizehBlock.setLayoutY(540);
                 }
-                case 4 -> {
+                case 3 -> {
                     gizehBlock.setVisible(true);
                     gizehBlock.setLayoutX(150);
                     gizehBlock.setLayoutY(540);
@@ -608,7 +608,7 @@ public class GameController {
                     olympieBlock.setLayoutX(620);
                     olympieBlock.setLayoutY(520);
                 }
-                case 1 -> {
+                case 4 -> {
                     olympieBlock.setVisible(true);
                     olympieBlock.setLayoutX(540);
                     olympieBlock.setLayoutY(15);
@@ -618,12 +618,12 @@ public class GameController {
                     olympieBlock.setLayoutX(20);
                     olympieBlock.setLayoutY(390);
                 }
-                case 3 -> {
+                case 6 -> {
                     olympieBlock.setVisible(true);
                     olympieBlock.setLayoutX(1070);
                     olympieBlock.setLayoutY(540);
                 }
-                case 4 -> {
+                case 3 -> {
                     olympieBlock.setVisible(true);
                     olympieBlock.setLayoutX(150);
                     olympieBlock.setLayoutY(540);

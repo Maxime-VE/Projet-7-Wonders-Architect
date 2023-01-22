@@ -13,9 +13,9 @@ public class Game {
     //_________________________________________________________
     // ZONE DE CREATION POUR LES TEST
     //_________________________________________________________
-    Player sancho = new Player("Sancho",15,Wonder.Alexandrie);
+    Player sancho = new Player("Test0",15,Wonder.Alexandrie);
 
-    Player elHombre = new Player("ElHombreQueSoy",15,Wonder.Gizeh);
+    Player elHombre = new Player("Test1",15,Wonder.Gizeh);
 
 
     //_________________________________________________________

@@ -229,7 +229,7 @@
             <Image url="@images/tokens/token-conflict-peace.png" />
          </image>
       </ImageView>
-      <Pane fx:id="alexendrieBlock" layoutX="446.0" layoutY="103.0" prefHeight="194.0" prefWidth="128.0" styleClass="wonderPane" visible="false">
+      <Pane fx:id="alexendrieBlock" layoutX="150.0" layoutY="515.0" prefHeight="175.0" prefWidth="119.0" styleClass="wonderPane" visible="false">
          <children>
             <ImageView fitHeight="29.0" fitWidth="128.0" layoutX="-13.0" layoutY="160.0" preserveRatio="true">
                <image>
@@ -507,42 +507,42 @@
             <Image url="@images/icon/cartes-modified(4).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="inventoryRessource_50" fitHeight="21.0" fitWidth="22.0" layoutX="698.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="inventoryRessource_50" fitHeight="21.0" fitWidth="22.0" layoutX="698.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/icon/cartes-modified(1).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="inventoryRessource_51" fitHeight="21.0" fitWidth="22.0" layoutX="721.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="inventoryRessource_51" fitHeight="21.0" fitWidth="22.0" layoutX="721.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/icon/cartes-modified(6).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="inventoryRessource_121" fitHeight="21.0" fitWidth="22.0" layoutX="745.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="inventoryRessource_121" fitHeight="21.0" fitWidth="22.0" layoutX="745.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/icon/cartes-modified(3).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="inventoryRessource_131" fitHeight="21.0" fitWidth="22.0" layoutX="766.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="inventoryRessource_131" fitHeight="21.0" fitWidth="22.0" layoutX="766.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/icon/cartes-modified(4).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="inventoryRessource_141" fitHeight="21.0" fitWidth="22.0" layoutX="698.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="inventoryRessource_141" fitHeight="21.0" fitWidth="22.0" layoutX="698.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/icon/cartes-modified(5).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="inventoryRessource_151" fitHeight="21.0" fitWidth="22.0" layoutX="721.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="inventoryRessource_151" fitHeight="21.0" fitWidth="22.0" layoutX="721.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/icon/cartes-modified(4).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="inventoryRessource_161" fitHeight="21.0" fitWidth="22.0" layoutX="745.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="inventoryRessource_161" fitHeight="21.0" fitWidth="22.0" layoutX="745.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/icon/cartes-modified(6).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="inventoryRessource_171" fitHeight="21.0" fitWidth="22.0" layoutX="768.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="inventoryRessource_171" fitHeight="21.0" fitWidth="22.0" layoutX="768.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/icon/cartes-modified(4).png" />
          </image>
@@ -587,42 +587,42 @@
             <Image url="@images/icon/cartes-modified(4).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="inventoryRessource_70" fitHeight="21.0" fitWidth="22.0" layoutX="1058.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="inventoryRessource_70" fitHeight="21.0" fitWidth="22.0" layoutX="1058.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/icon/cartes-modified(1).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="inventoryRessource_71" fitHeight="21.0" fitWidth="22.0" layoutX="1081.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="inventoryRessource_71" fitHeight="21.0" fitWidth="22.0" layoutX="1081.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/icon/cartes-modified(6).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="inventoryRessource_72" fitHeight="21.0" fitWidth="22.0" layoutX="1105.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="inventoryRessource_72" fitHeight="21.0" fitWidth="22.0" layoutX="1105.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/icon/cartes-modified(3).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="inventoryRessource_73" fitHeight="21.0" fitWidth="22.0" layoutX="1126.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="inventoryRessource_73" fitHeight="21.0" fitWidth="22.0" layoutX="1126.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/icon/cartes-modified(4).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="inventoryRessource_74" fitHeight="21.0" fitWidth="22.0" layoutX="1058.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="inventoryRessource_74" fitHeight="21.0" fitWidth="22.0" layoutX="1058.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/icon/cartes-modified(5).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="inventoryRessource_75" fitHeight="21.0" fitWidth="22.0" layoutX="1081.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="inventoryRessource_75" fitHeight="21.0" fitWidth="22.0" layoutX="1081.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/icon/cartes-modified(4).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="inventoryRessource_76" fitHeight="21.0" fitWidth="22.0" layoutX="1105.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="inventoryRessource_76" fitHeight="21.0" fitWidth="22.0" layoutX="1105.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/icon/cartes-modified(6).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="inventoryRessource_77" fitHeight="21.0" fitWidth="22.0" layoutX="1128.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="inventoryRessource_77" fitHeight="21.0" fitWidth="22.0" layoutX="1128.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@images/icon/cartes-modified(4).png" />
          </image>
