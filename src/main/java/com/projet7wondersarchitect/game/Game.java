@@ -42,12 +42,8 @@ public class Game {
             System.out.println("\n" +
                     "Appuyez sur 1:");
             test = scanner.nextInt();
-            ressourcesMerveille(joueur);
-            constructionMerveille(joueur, verificationConstruction(joueur));
-            System.out.println("""
 
-                    ####################################
-                    """);
+            constructionMerveille(joueur, verificationConstruction(joueur));
         }
     }
 
@@ -90,7 +86,7 @@ public class Game {
                     """);
         for (int i = 0; i < playerNumbers; i++) {
             System.out.println("Enter name of player " + (i + 1) + " :");
-            String playerName = "Player " + (i+1);
+            String playerName = "Lachaud BG " + (i+1);
             System.out.println("Player " + (i+1) + " names " + playerName);
             System.out.println("Enter" + playerName + "'s age :");
             int age = random.nextInt(99); // ATTENTION le jeu est conseillé pour des joueurs de +8 (flemme de généré un nombre > +8 pour l'instant ! ).
@@ -592,32 +588,10 @@ public class Game {
         System.out.println(player.inventory);
     }
 
-    public static void ressourcesMerveille(Player player){
+    public static void ressourcesMerveille(Player player, ArrayList<Integer> ressourcesPossibles){
+        //Tchek ressource et quelle ressource utilisé
+        int longueur = ressourcesPossibles.size();
         ArrayList<Integer> wonderStage= new ArrayList<>();
-
-        ArrayList<Card> materialCard = new ArrayList<Card>();
-        ArrayList<Card> materialCardTemporary = new ArrayList<Card>();
-        for(Card card : player.inventory){
-            if(card.front.material != null){    //RECUPERATION DES CARTES MATERIAL
-                materialCard.add(card);
-            }
-        }
-
-        int [] ressources = {0,0,0,0,0,0};
-        for(Card card : materialCard){
-            switch(card.front.material){
-                case Stone -> ressources[0]++;
-                case Wood -> ressources[1]++;
-                case Paper -> ressources[2]++;
-                case Brick -> ressources[3]++;   //On fait "+1" à chaque fois que la ressource correspond
-                case Glass -> ressources[4]++;
-                case Gold -> ressources[5]++;
-            }
-        }
-        int [] ressourceTemporary = new int[]{ressources[0], ressources[1], ressources[2], ressources[3], ressources[4], 0};
-
-        int nbGold = ressources[5];
-
         wonderStage = verificationConstruction(player);
         int[] necessaryItems = new int[0];
         for(Integer stage : wonderStage) {
@@ -626,86 +600,52 @@ public class Game {
                 case Babylone -> necessaryItems = progressionBabylone[stage][1];
                 case Gizeh -> necessaryItems = progressionGizeh[stage][1];
                 case Ephese -> necessaryItems = progressionEphese[stage][1];
-                case Halicarnasse -> necessaryItems = progressionHalicarnasse[stage][1];
+                case Halicarnasse -> necessaryItems = progressionHalicarnasse[stage][1]; //LOLL
                 case Rhodes -> necessaryItems = progressionRhodes[stage][1];
                 case Olympie -> necessaryItems = progressionOlympie[stage][1];
             }
         }
-
-        ArrayList<int[]> possibilites = new ArrayList<>();
-
         ArrayList<Integer> playerInventory = new ArrayList<>(); // [Stone,Wood,Paper,Brick,Glass,Gold]
         for(Card carType : player.inventory) {
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialStone));
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialWood));
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialPaper));
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialBrick));
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialGlass));
             playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialGold));
+            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialGlass));
+            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialBrick));
+            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialPaper));
+            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialWood));
+            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialStone));
         }
 
-        int ressourceMax = ressources[0];
-        int ressourceDif = 0;
-        for (int i = 0; i < 5; i++){
-            if (ressourceMax < ressources[i]){
-                ressourceMax = ressources[i];
-            }
-            if (ressources[i] > 0){
-                ressourceDif++;
+        if(necessaryItems[1] == 1) {
+            int difference = 0;
+            for(Integer cardType : playerInventory) {
+                if (cardType != 0) {
+                    difference++;      //Test pour le nombre de types de cartes différents
+                }
+                if(difference>necessaryItems[0]) {
+                    System.out.println("Choose Material to build : ");
+                    for (Integer material : playerInventory) {
+
+                    }
+                }
+                else if (difference==necessaryItems[0]) {
+
+                }
+
             }
         }
-        ressourceMax+=ressources[5];
-        ressourceDif+=ressources[5];
-
-        if (ressourceMax >= necessaryItems[0] & necessaryItems[1] == 0 || ressourceDif >= necessaryItems[0] & necessaryItems[1] == 1){
-            Random gold = new Random();
-            if(necessaryItems[1] == 0) {
-                for (int i = 0; i < 5; i++){
-                    for (int j = 0; j < nbGold; j++){
-                        if (ressources[i] + j >= necessaryItems[0]){
-                            for (int k = j+1; k < nbGold; k++){
-                                int carteGold = gold.nextInt(4);
-                                if (carteGold != i){
-                                    ressourceTemporary[carteGold]++;
-                                }
-                            }
-                            ressourceTemporary[i] += j;
-                            possibilites.add(ressourceTemporary);
-                        }
-                    }
-                }
-            }
-
-            else{
-                int carteMateriel = 0;
-                for (int i = 0; i < 5; i++){
-                    if (ressources[i] != 0){
-                        carteMateriel ++;
-                    }
-                }
-
-                for (int j = 0; j < nbGold; j++){
-                    int carteGold;
-                    if (carteMateriel + j >= necessaryItems[0]){
-                        for (int k = 0; k <necessaryItems[0] - carteMateriel; k++){
-                            carteGold = gold.nextInt(4);
-                            while (ressources[carteGold] != 0){
-                                carteGold = gold.nextInt(4);
-                            }
-                            ressourceTemporary[carteGold]++;
-                        }
-                        for (int l = 1; l < carteMateriel + j - necessaryItems[0]; l++){
-                            carteGold = gold.nextInt(4);
-                            ressourceTemporary[carteGold]++;
-                        }
-                        possibilites.add(ressourceTemporary);
-                    }
-                }
-            }
-            int choixConfiguration = gold.nextInt(possibilites.size()-1);
-            int[] configurationFinale = possibilites.get(choixConfiguration);
+        if(necessaryItems[1] == 0) {
 
         }
+        //Récupération des ressources (vérif des ressources pour construction)
+
+        if (longueur == 1){
+            //transformation des gold en une des ressources possibles
+        }
+        else if (longueur > 1){
+            //random nombre (provisoir, pour les test) + ressource merveille[nombre]
+        }
+        //else si besoin.
+
     }
 
     //----------------------
