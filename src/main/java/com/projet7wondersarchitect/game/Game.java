@@ -10,7 +10,8 @@ public class Game {
     static Random random = new Random();
     public static List<Player> playerList = new ArrayList<>();
     private static Wonder wondersSelect;
-
+    static int numberJeton;
+    static Jeton[] listeJeton;
 
     //_________________________________________________________
     // ZONE DE CREATION POUR LES TEST
@@ -19,7 +20,7 @@ public class Game {
     //_________________________________________________________
     public static void main(String[] args) {
         gameInitialisation(); /** On génère les les joueurs. Ils sélectionnent une merveille et se voient attribué une pioche*/
-
+        initialisationJeton();
         Player joueur = playerList.get(0);
         drawCard(joueur.piochePersonnelle, joueur);
         drawCard(joueur.piochePersonnelle, joueur);
@@ -28,6 +29,7 @@ public class Game {
             System.out.println(c.front);
         }
         Scanner scanner = new Scanner(System.in);
+        //à modifier pour piocher dans les 3 pioches
         while(true){
             drawCard(joueur.piochePersonnelle, joueur);
             System.out.println("Indication paquet:");
@@ -39,6 +41,7 @@ public class Game {
             int test = scanner.nextInt();
             System.out.println("\n" +
                     verificationConstruction(joueur));
+            changeJeton(joueur);
             System.out.println("\n" +
                     "Appuyez sur 1:");
             test = scanner.nextInt();
@@ -70,15 +73,23 @@ public class Game {
         return listeCarte;
     }
 
+    public static void initialisationJeton(){
+        for (int i = 0; i < numberJeton; i++){
+            listeJeton[i] = new JetonPaix("Jeton Paix");
+        }
+        System.out.println(listeJeton);
+    }
+
     public static void gameInitialisation() {
         System.out.println("""
                 How many player want to play ?
                 (You can play between 2 and 7 players).
                 """);
         int playerNumbers = 2;
-        int jetonNumber = nbJeton(playerNumbers);
+        numberJeton = nbJeton(playerNumbers);
+        listeJeton = new Jeton[numberJeton];
         System.out.println("There are " + playerNumbers + " players.\n" +
-                "So, during this game, there will be " + jetonNumber + " jeton.\n" +
+                "So, during this game, there will be " + numberJeton + " jeton.\n" +
                 "");
         System.out.println("""
 
@@ -86,7 +97,7 @@ public class Game {
                     """);
         for (int i = 0; i < playerNumbers; i++) {
             System.out.println("Enter name of player " + (i + 1) + " :");
-            String playerName = "Lachaud BG " + (i+1);
+            String playerName = "Player " + (i+1);
             System.out.println("Player " + (i+1) + " names " + playerName);
             System.out.println("Enter" + playerName + "'s age :");
             int age = random.nextInt(99); // ATTENTION le jeu est conseillé pour des joueurs de +8 (flemme de généré un nombre > +8 pour l'instant ! ).
@@ -646,6 +657,45 @@ public class Game {
         }
         //else si besoin.
 
+    }
+    public static void changeJeton(Player player){
+        Random rand = new Random();
+        Card lastCard = player.inventory.get(player.inventory.size()-1);
+        if (lastCard.front.cardCategory == CardCategory.WarCard){
+            int nbJetonBataille = 0;
+            if (nbJetonBataille < numberJeton){
+                int nbBouclier = lastCard.front.cornCount;
+                if (nbJetonBataille + nbBouclier < numberJeton){
+                    if (nbBouclier > 0){
+                        for (int j = 0; j < nbBouclier; j++){
+                            listeJeton[nbJetonBataille + nbBouclier] = new JetonPaix("Jeton de Bataille");
+                        }
+                    }
+                    nbJetonBataille += nbBouclier;
+                }
+                if (nbBouclier < 2){
+                    System.out.println("\n" +
+                            "Il y a " + nbBouclier + " bouclier de tirer pour ce tour.\n" +
+                            "");
+                }
+                else{
+                    System.out.println("\n" +
+                            "Il y a " + nbBouclier + " boucliers de tirer pour ce tour.\n" +
+                            "");
+                }
+                System.out.println(listeJeton);
+            }
+            else{
+                System.out.println("""
+
+                C'est l'heure de la bataille
+                """);
+                //bataille();
+                for (int i = 0; i < numberJeton; i++){
+                    listeJeton[i] = new JetonPaix("Jeton Paix");
+                }
+            }
+        }
     }
 
     //----------------------
