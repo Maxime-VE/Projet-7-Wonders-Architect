@@ -9,6 +9,8 @@ public class Player {
     List<Card> inventory;
     public List<Card> piochePersonnelle;
     private int resources;
+    public int numberBouclier;
+    public int jetonVictoire;
     private int victoryPoints;
 
     private Wonder chosenWonder;
@@ -22,6 +24,8 @@ public class Player {
         this.inventory = new ArrayList<>();
         this.piochePersonnelle = new ArrayList<>();
         this.resources = 0;
+        this.numberBouclier = 0;
+        this.jetonVictoire = 0;
         this.victoryPoints = 0;
         this.age = age ;
         this.chosenWonder = wonder;

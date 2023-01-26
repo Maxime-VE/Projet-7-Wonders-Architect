@@ -1,6 +1,7 @@
 package com.projet7wondersarchitect.game;
 
 import com.projet7wondersarchitect.domain.*;
+import javafx.util.Pair;
 
 import java.util.*;
 
@@ -12,6 +13,8 @@ public class Game {
     private static Wonder wondersSelect;
     static int numberJeton;
     static Jeton[] listeJeton;
+    static int playerNumbers;
+    static Player [] listePlayer;
 
     //_________________________________________________________
     // ZONE DE CREATION POUR LES TEST
@@ -19,34 +22,47 @@ public class Game {
 
     //_________________________________________________________
     public static void main(String[] args) {
-        gameInitialisation(); /** On génère les les joueurs. Ils sélectionnent une merveille et se voient attribué une pioche*/
+        gameInitialisation(); /** On génère les joueurs. Ils sélectionnent une merveille et se voient attribué une pioche*/
         initialisationJeton();
-        Player joueur = playerList.get(0);
-        drawCard(joueur.piochePersonnelle, joueur);
-        drawCard(joueur.piochePersonnelle, joueur);
-        System.out.println("Wonder en cours : " + joueur.getWonder());
-        for(Card c : joueur.inventory){
-            System.out.println(c.front);
+        listePlayer = new Player[playerNumbers];
+        System.out.println("""
+
+                #########################
+                """);
+        for (int i = 0; i < playerNumbers; i++){
+            listePlayer[i] = playerList.get(i);
+            drawCard(listePlayer[i].piochePersonnelle, listePlayer[i]);
+            drawCard(listePlayer[i].piochePersonnelle, listePlayer[i]);
+            System.out.println("Wonder en cours : " + listePlayer[i].getWonder());
+            for(Card c : listePlayer[i].inventory){
+                System.out.println(c.front);
+            }
+            System.out.println("""
+
+                #########################
+                """);
         }
         Scanner scanner = new Scanner(System.in);
         //à modifier pour piocher dans les 3 pioches
         while(true){
-            drawCard(joueur.piochePersonnelle, joueur);
-            System.out.println("Indication paquet:");
-            for(Card c : joueur.inventory){
-                System.out.println(c.front);
-            }
-            System.out.println("\n" +
-                    "Appuyez sur 1:");
-            int test = scanner.nextInt();
-            System.out.println("\n" +
-                    verificationConstruction(joueur));
-            changeJeton(joueur);
-            System.out.println("\n" +
-                    "Appuyez sur 1:");
-            test = scanner.nextInt();
+            for (int j = 0; j < playerNumbers; j++){
+                drawCard(listePlayer[j].piochePersonnelle, listePlayer[j]);
+                System.out.println("Indication paquet:");
+                for(Card c : listePlayer[j].inventory){
+                    System.out.println(c.front);
+                }
+                System.out.println("\n" +
+                        "Appuyez sur 1:");
+                int test = scanner.nextInt();
+                System.out.println("\n" +
+                        verificationConstruction(listePlayer[j]));
+                changeJeton(listePlayer[j]);
+                System.out.println("\n" +
+                        "Appuyez sur 1:");
+                test = scanner.nextInt();
 
-            constructionMerveille(joueur, verificationConstruction(joueur));
+                constructionMerveille(listePlayer[j], verificationConstruction(listePlayer[j]));
+            }
         }
     }
 
@@ -85,7 +101,7 @@ public class Game {
                 How many player want to play ?
                 (You can play between 2 and 7 players).
                 """);
-        int playerNumbers = 2;
+        playerNumbers = 2;
         numberJeton = nbJeton(playerNumbers);
         listeJeton = new Jeton[numberJeton];
         System.out.println("There are " + playerNumbers + " players.\n" +
@@ -100,7 +116,7 @@ public class Game {
             String playerName = "Player " + (i+1);
             System.out.println("Player " + (i+1) + " names " + playerName);
             System.out.println("Enter" + playerName + "'s age :");
-            int age = random.nextInt(99); // ATTENTION le jeu est conseillé pour des joueurs de +8 (flemme de généré un nombre > +8 pour l'instant ! ).
+            int age = random.nextInt(99); // ATTENTION le jeu est conseillé pour des joueurs de +8.
             System.out.println(playerName + " is " + age + " years old\n");
             System.out.println("""
                     ###############################################
@@ -306,10 +322,6 @@ public class Game {
                 case Gold -> ressources[5]++;
             }
         }
-
-        int longueurMaterialCardTemp;
-
-        int position;
 
         int [][][] progression;
         switch(player.getWonder()){
@@ -599,64 +611,68 @@ public class Game {
         System.out.println(player.inventory);
     }
 
-    public static void ressourcesMerveille(Player player, ArrayList<Integer> ressourcesPossibles){
+    public void ressourcesMerveille(Player player, ArrayList<Integer> ressourcesPossibles) {
         //Tchek ressource et quelle ressource utilisé
         int longueur = ressourcesPossibles.size();
-        ArrayList<Integer> wonderStage= new ArrayList<>();
+        ArrayList<Integer> wonderStage = new ArrayList<>();
         wonderStage = verificationConstruction(player);
         int[] necessaryItems = new int[0];
-        for(Integer stage : wonderStage) {
+        for (Integer stage : wonderStage) {
             switch (player.getWonder()) {
                 case Alexandrie -> necessaryItems = progressionAlexendrie[stage][1];
                 case Babylone -> necessaryItems = progressionBabylone[stage][1];
                 case Gizeh -> necessaryItems = progressionGizeh[stage][1];
                 case Ephese -> necessaryItems = progressionEphese[stage][1];
-                case Halicarnasse -> necessaryItems = progressionHalicarnasse[stage][1]; //LOLL
+                case Halicarnasse -> necessaryItems = progressionHalicarnasse[stage][1];
                 case Rhodes -> necessaryItems = progressionRhodes[stage][1];
                 case Olympie -> necessaryItems = progressionOlympie[stage][1];
             }
         }
-        ArrayList<Integer> playerInventory = new ArrayList<>(); // [Stone,Wood,Paper,Brick,Glass,Gold]
-        for(Card carType : player.inventory) {
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialGold));
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialGlass));
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialBrick));
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialPaper));
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialWood));
-            playerInventory.add(Collections.frequency(player.inventory, CardType.CardMaterialStone));
+        ArrayList<Pair<CardType, Integer>> playerInventory = new ArrayList<>(); // [Gold,Glass,Brick,Paper,Wood,Stone]
+        List<Object> materialTypeNumber = new ArrayList<>();
+        for (Card carType : player.inventory) {
+            playerInventory.add(new Pair<>(CardType.CardMaterialGold, Collections.frequency(player.inventory, CardType.CardMaterialGold)));
+            playerInventory.add(new Pair<>(CardType.CardMaterialGlass, Collections.frequency(player.inventory, CardType.CardMaterialGlass)));
+            playerInventory.add(new Pair<>(CardType.CardMaterialBrick, Collections.frequency(player.inventory, CardType.CardMaterialBrick)));
+            playerInventory.add(new Pair<>(CardType.CardMaterialPaper, Collections.frequency(player.inventory, CardType.CardMaterialPaper)));
+            playerInventory.add(new Pair<>(CardType.CardMaterialWood, Collections.frequency(player.inventory, CardType.CardMaterialWood)));
+            playerInventory.add(new Pair<>(CardType.CardMaterialStone, Collections.frequency(player.inventory, CardType.CardMaterialStone)));
+
         }
 
-        if(necessaryItems[1] == 1) {
-            int difference = 0;
-            for(Integer cardType : playerInventory) {
-                if (cardType != 0) {
-                    difference++;      //Test pour le nombre de types de cartes différents
-                }
-                if(difference>necessaryItems[0]) {
-                    System.out.println("Choose Material to build : ");
-                    for (Integer material : playerInventory) {
 
-                    }
+        if (necessaryItems[1] == 1) {
+            int diff = 0;
+            for (Pair<CardType, Integer> list : playerInventory) {
+                if (!(list.getValue().equals(0))) {
+                    diff++;
                 }
-                else if (difference==necessaryItems[0]) {
+            }
 
-                }
+            if (diff > necessaryItems[0]) {
+                System.out.println("Choose " + necessaryItems + " material to build : ");
+                System.out.println("\n");
 
             }
-        }
-        if(necessaryItems[1] == 0) {
+            if (diff == necessaryItems[0]) {
+                for (Pair<CardType, Integer> list : playerInventory) {
+                    //list.get = list.getValue() - 1;
+                }
+            }
+
+            if (necessaryItems[1] == 0) {
+
+            }
+            //Récupération des ressources (vérif des ressources pour construction)
+
+            if (longueur == 1) {
+                //transformation des gold en une des ressources possibles
+            } else if (longueur > 1) {
+                //random nombre (provisoir, pour les test) + ressource merveille[nombre]
+            }
+            //else si besoin.
 
         }
-        //Récupération des ressources (vérif des ressources pour construction)
-
-        if (longueur == 1){
-            //transformation des gold en une des ressources possibles
-        }
-        else if (longueur > 1){
-            //random nombre (provisoir, pour les test) + ressource merveille[nombre]
-        }
-        //else si besoin.
-
     }
     public static void changeJeton(Player player){
         Random rand = new Random();
@@ -665,6 +681,7 @@ public class Game {
             int nbJetonBataille = 0;
             if (nbJetonBataille < numberJeton){
                 int nbBouclier = lastCard.front.cornCount;
+                player.numberBouclier += nbBouclier;
                 if (nbJetonBataille + nbBouclier < numberJeton){
                     if (nbBouclier > 0){
                         for (int j = 0; j < nbBouclier; j++){
@@ -690,12 +707,40 @@ public class Game {
 
                 C'est l'heure de la bataille
                 """);
-                //bataille();
+                bataille(player);
                 for (int i = 0; i < numberJeton; i++){
                     listeJeton[i] = new JetonPaix("Jeton Paix");
                 }
             }
         }
+    }
+
+    public static void bataille (Player player){
+        int centre = 0;
+        for (int i = 0; i < playerNumbers; i++){
+            if (player == listePlayer[i]){
+                centre = i;
+            }
+        }
+        int droite = centre - 1;
+        int gauche = centre + 1;
+
+        if (centre == 0){
+            droite = playerNumbers - 1;
+        }
+        if (centre == playerNumbers - 1){
+            gauche = 0;
+        }
+
+        if (player.numberBouclier > listePlayer[gauche].numberBouclier){
+            player.jetonVictoire++;
+        }
+        if (droite != gauche){
+            if (player.numberBouclier > listePlayer[droite].numberBouclier){
+                player.jetonVictoire++;
+            }
+        }
+        System.out.println(player.numberBouclier);
     }
 
     //----------------------
