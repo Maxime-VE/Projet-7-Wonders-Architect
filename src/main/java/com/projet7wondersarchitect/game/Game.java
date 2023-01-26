@@ -611,7 +611,7 @@ public class Game {
         System.out.println(player.inventory);
     }
 
-    public void ressourcesMerveille(Player player, ArrayList<Integer> ressourcesPossibles) {
+    public static void ressourcesMerveille(Player player, ArrayList<Integer> ressourcesPossibles) {
         //Tchek ressource et quelle ressource utilisé
         int longueur = ressourcesPossibles.size();
         ArrayList<Integer> wonderStage = new ArrayList<>();
