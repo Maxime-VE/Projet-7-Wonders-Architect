@@ -105,7 +105,7 @@ public class Game {
             String playerName = "Player " + (i + 1);
             System.out.println("Player " + (i + 1) + " names " + playerName);
             System.out.println("Enter" + playerName + "'s age :");
-            int age = random.nextInt(99); // ATTENTION le jeu est conseillé pour des joueurs de +8 (flemme de généré un nombre > +8 pour l'instant ! ).
+            int age = random.nextInt(99);
             System.out.println(playerName + " is " + age + " years old\n");
             System.out.println("""
                     ###############################################
