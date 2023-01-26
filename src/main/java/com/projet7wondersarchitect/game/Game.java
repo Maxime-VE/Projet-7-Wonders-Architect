@@ -674,6 +674,7 @@ public class Game {
 
         }
     }
+
     public static void changeJeton(Player player){
         Random rand = new Random();
         Card lastCard = player.inventory.get(player.inventory.size()-1);
