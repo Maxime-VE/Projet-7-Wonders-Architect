@@ -433,7 +433,7 @@ public class GameController {
                     halicarBlock.setLayoutX(1070);
                     halicarBlock.setLayoutY(540);
                 }
-                case 1 -> {
+                case 3 -> {
                     halicarBlock.setVisible(true);
                     halicarBlock.setLayoutX(150);
                     halicarBlock.setLayoutY(540);
@@ -471,7 +471,7 @@ public class GameController {
                     rodesBlock.setLayoutX(1070);
                     rodesBlock.setLayoutY(540);
                 }
-                case 1 -> {
+                case 3 -> {
                     rodesBlock.setVisible(true);
                     rodesBlock.setLayoutX(150);
                     rodesBlock.setLayoutY(540);
@@ -509,7 +509,7 @@ public class GameController {
                     epheseBlock.setLayoutX(1070);
                     epheseBlock.setLayoutY(540);
                 }
-                case 1 -> {
+                case 3 -> {
                     epheseBlock.setVisible(true);
                     epheseBlock.setLayoutX(150);
                     epheseBlock.setLayoutY(540);
@@ -547,7 +547,7 @@ public class GameController {
                     babyloneBlock.setLayoutX(1070);
                     babyloneBlock.setLayoutY(540);
                 }
-                case 1 -> {
+                case 3 -> {
                     babyloneBlock.setVisible(true);
                     babyloneBlock.setLayoutX(150);
                     babyloneBlock.setLayoutY(540);
@@ -585,7 +585,7 @@ public class GameController {
                     gizehBlock.setLayoutX(1070);
                     gizehBlock.setLayoutY(540);
                 }
-                case 1 -> {
+                case 3 -> {
                     gizehBlock.setVisible(true);
                     gizehBlock.setLayoutX(150);
                     gizehBlock.setLayoutY(540);
@@ -623,7 +623,7 @@ public class GameController {
                     olympieBlock.setLayoutX(1070);
                     olympieBlock.setLayoutY(540);
                 }
-                case 1 -> {
+                case 3 -> {
                     olympieBlock.setVisible(true);
                     olympieBlock.setLayoutX(150);
                     olympieBlock.setLayoutY(540);
