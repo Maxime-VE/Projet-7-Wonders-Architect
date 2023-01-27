@@ -82,7 +82,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="popUpJ_6" layoutX="626.0" layoutY="460.0" prefHeight="146.0" prefWidth="320.0" visible="false">
+      <AnchorPane fx:id="popUpJ_6" layoutX="626.0" layoutY="460.0" prefHeight="146.0" prefWidth="320.0" styleClass="playerPane" visible="false">
          <children>
             <TextField fx:id="Nom_J_6" layoutX="14.0" layoutY="43.0" />
             <Label layoutX="14.0" layoutY="5.0" text="Nom du joueur 6:" textFill="WHITE">
@@ -103,7 +103,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="popUpJ_5" layoutX="195.0" layoutY="379.0" prefHeight="146.0" prefWidth="320.0" visible="false">
+      <AnchorPane fx:id="popUpJ_5" layoutX="195.0" layoutY="379.0" prefHeight="146.0" prefWidth="320.0" styleClass="playerPane" visible="false">
          <children>
             <TextField fx:id="Nom_J_5" layoutX="14.0" layoutY="43.0" />
             <Label layoutX="14.0" layoutY="5.0" text="Nom du joueur 5:" textFill="WHITE">
@@ -166,7 +166,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="popUpJ_7" layoutX="195.0" layoutY="545.0" prefHeight="146.0" prefWidth="320.0" visible="false">
+      <AnchorPane fx:id="popUpJ_7" layoutX="195.0" layoutY="545.0" prefHeight="146.0" prefWidth="320.0" styleClass="playerPane" visible="false">
          <children>
             <TextField fx:id="Nom_J_7" layoutX="14.0" layoutY="43.0" />
             <Label layoutX="14.0" layoutY="5.0" text="Nom du joueur 7:" textFill="WHITE">
