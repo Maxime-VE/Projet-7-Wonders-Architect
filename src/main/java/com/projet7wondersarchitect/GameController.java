@@ -585,7 +585,7 @@ public class GameController {
                     gizehBlock.setLayoutX(1070);
                     gizehBlock.setLayoutY(540);
                 }
-                case 3 -> {
+                case 1 -> {
                     gizehBlock.setVisible(true);
                     gizehBlock.setLayoutX(150);
                     gizehBlock.setLayoutY(540);

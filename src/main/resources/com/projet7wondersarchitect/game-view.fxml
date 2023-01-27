@@ -19,11 +19,6 @@
             <Image url="@images/wonders/wonder-rhodes.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="186.0" fitWidth="157.0" layoutX="747.0" layoutY="236.0" preserveRatio="true">
-         <image>
-            <Image url="@images/modele-vide/jeton_scientifique.png" />
-         </image>
-      </ImageView>
       <ImageView fx:id="pioche2" disable="true" fitHeight="104.0" fitWidth="79.0" layoutX="235.0" layoutY="404.0" onMouseClicked="#actionJoueur" preserveRatio="true">
          <image>
             <Image url="@images/cards/card-back/card-back-question.png" />
@@ -287,7 +282,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="epheseBlock" layoutX="455.0" layoutY="305.0" prefHeight="162.0" prefWidth="142.0" styleClass="wonderPane" visible="false">
+      <Pane fx:id="epheseBlock" layoutX="484.0" layoutY="305.0" prefHeight="162.0" prefWidth="142.0" styleClass="wonderPane" visible="false">
          <children>
             <ImageView fitHeight="34.0" fitWidth="146.0" layoutX="-18.0" layoutY="129.0" preserveRatio="true">
                <image>
@@ -374,7 +369,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="rodesBlock" layoutX="300.0" layoutY="195.0" prefHeight="162.0" prefWidth="98.0" styleClass="wonderPane" visible="false">
+      <Pane fx:id="rodesBlock" layoutX="80.0" layoutY="15.0" prefHeight="162.0" prefWidth="98.0" styleClass="wonderPane" visible="false">
          <children>
             <ImageView fitHeight="17.0" fitWidth="48.0" layoutX="-6.0" layoutY="145.0" preserveRatio="true">
                <image>
@@ -437,7 +432,7 @@
             <Font name="Arial Nova Cond" size="21.0" />
          </font>
       </Label>
-      <Label fx:id="labelJ2" layoutX="680.0" layoutY="15.0" text="Joueur" visible="false">
+      <Label fx:id="labelJ5" layoutX="680.0" layoutY="15.0" text="Joueur" visible="false">
          <font>
             <Font name="Arial Nova Cond" size="21.0" />
          </font>
@@ -447,12 +442,12 @@
             <Font name="Arial Nova Cond" size="21.0" />
          </font>
       </Label>
-      <Label fx:id="labelJ4" layoutX="1175.0" layoutY="551.0" text="Joueur" visible="false">
+      <Label fx:id="labelJ7" layoutX="1175.0" layoutY="551.0" text="Joueur" visible="false">
          <font>
             <Font name="Arial Nova Cond" size="21.0" />
          </font>
       </Label>
-      <Label fx:id="labelJ5" layoutX="300.0" layoutY="526.0" text="Joueur" visible="false">
+      <Label fx:id="labelJ2" layoutX="300.0" layoutY="510.0" text="Joueur" visible="false">
          <font>
             <Font name="Arial Nova Cond" size="21.0" />
          </font>
@@ -462,7 +457,7 @@
             <Font name="Arial Nova Cond" size="21.0" />
          </font>
       </Label>
-      <Label fx:id="labelJ7" layoutX="14.0" layoutY="67.0" text="Joueur" visible="false">
+      <Label fx:id="labelJ4" layoutX="14.0" layoutY="67.0" text="Joueur" visible="false">
          <font>
             <Font name="Arial Nova Cond" size="21.0" />
          </font>
@@ -627,14 +622,114 @@
             <Image url="@images/icon/cartes-modified(4).png" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="preEcran" onMouseClicked="#chargementDesDonnees" opacity="0.7" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;" stylesheets="@css/player-modal.css">
+      <ImageView fitHeight="44.0" fitWidth="45.0" layoutX="738.0" layoutY="315.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens-progress/back/token-back.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="796.0" layoutY="264.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens-progress/token-economy.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="794.0" layoutY="315.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens-progress/token-architecture.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="796.0" layoutY="371.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens-progress/token-tactic.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="364.0" layoutY="370.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-3-laurel-points.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="374.0" layoutY="380.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-3-laurel-points.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="374.0" layoutY="380.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-3-laurel-points.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="39.0" layoutX="384.0" layoutY="395.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-3-laurel-points.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="406.0" layoutY="370.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-3-laurel-points.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="364.0" layoutY="407.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-3-laurel-points.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="421.0" layoutY="397.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-3-laurel-points.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="404.0" layoutY="416.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-3-laurel-points.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="423.0" layoutY="369.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-3-laurel-points.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="383.0" layoutY="433.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-3-laurel-points.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="385.0" layoutY="397.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-3-laurel-points.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="431.0" layoutY="411.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-3-laurel-points.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="404.0" layoutY="390.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-3-laurel-points.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="414.0" layoutY="436.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-3-laurel-points.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="440.0" layoutY="386.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-3-laurel-points.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="362.0" layoutY="433.0" preserveRatio="true">
+         <image>
+            <Image url="@images/tokens/token-3-laurel-points.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="preEcran" onMouseClicked="#chargementDesDonnees" opacity="0.7" prefHeight="720.0" prefWidth="1309.0" style="-fx-background-color: #000000;" stylesheets="@css/player-modal.css">
          <children>
             <Label layoutX="193.0" layoutY="140.0" text="La partie va bientôt débuter ! " textFill="WHITE">
                <font>
                   <Font name="Papyrus" size="71.0" />
                </font>
             </Label>
-            <Label layoutX="282.0" layoutY="501.0" text="Cliquez sur l'écran pour passer à la suite" textFill="WHITE">
+            <Label layoutX="281.0" layoutY="496.0" text="Cliquez sur l'écran pour passer à la suite" textFill="WHITE">
                <font>
                   <Font name="Papyrus" size="42.0" />
                </font>
